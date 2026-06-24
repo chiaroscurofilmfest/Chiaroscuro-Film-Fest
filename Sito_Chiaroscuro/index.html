@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it" data-theme="light" data-density="regular" data-font="sans">
+<head>
+<meta charset="utf-8">
+<title>Chiaroscuro Film Fest — Bergamo International Film Festival</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Chiaroscuro Film Fest — III Edizione · 28–30 settembre 2026 · Cinema Conca Verde, Bergamo. Festival internazionale di cortometraggi indipendenti.">
+<meta name="theme-color" content="#faf9f6">
+<meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)">
+
+<!-- Social / Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chiaroscuro Film Fest">
+<meta property="og:title" content="Chiaroscuro Film Fest — III Edizione · Bergamo 2026">
+<meta property="og:description" content="Festival internazionale di cortometraggi indipendenti. 28–30 settembre 2026, Cinema Conca Verde, Bergamo.">
+<meta property="og:image" content="assets/logotype-mark-black.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="assets/symbol-black.png">
+
+<!-- Fonts: General Sans + Cabinet Grotesk via Fontshare; Instrument Serif + JetBrains Mono via Google -->
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+/* General Sans — direct @font-face so it embeds offline */
+@font-face{font-family:'General Sans';src:url('https://cdn.fontshare.com/wf/FSGJYPLPXRLVZAZIVVF74LDN3Q3S2WUF/S5KG2IZFL42XIGI5UEGBWGDAYOGDCUXQ/XC3ORZWTJXPLYORAWMH6ZXES6GBV3W5L.woff2') format('woff2');font-weight:200;font-display:swap;font-style:normal;}
+@font-face{font-family:'General Sans';src:url('https://cdn.fontshare.com/wf/HFTXPYOBEE22ON2ZH2TDSTBQLGERA7LU/4AOH2PGTMHZO2YX5HMTOAV52ONC3WIXE/TW4KNQIPR4LNP4I6I6C6HKQ23B2EQAU5.woff2') format('woff2');font-weight:300;font-display:swap;font-style:normal;}
+@font-face{font-family:'General Sans';src:url('https://cdn.fontshare.com/wf/MFQT7HFGCR2L5ULQTW6YXYZXXHMPKLJ3/YWQ244D6TACUX5JBKATPOW5I5MGJ3G73/7YY3ZAAE3TRV2LANYOLXNHTPHLXVWTKH.woff2') format('woff2');font-weight:400;font-display:swap;font-style:normal;}
+@font-face{font-family:'General Sans';src:url('https://cdn.fontshare.com/wf/3RZHWSNONLLWJK3RLPEKUZOMM56GO4LJ/BPDRY7AHVI3MCDXXVXTQQ76H3UXA63S3/SB2OEB6IKZPRR6JT4GFJ2TFT6HBB6AZN.woff2') format('woff2');font-weight:500;font-display:swap;font-style:normal;}
+@font-face{font-family:'General Sans';src:url('https://cdn.fontshare.com/wf/K46YRH762FH3QJ25IQM3VAXAKCHEXXW4/ISLWQPUZHZF33LRIOTBMFOJL57GBGQ4B/3ZLMEXZEQPLTEPMHTQDAUXP5ZZXCZAEN.woff2') format('woff2');font-weight:600;font-display:swap;font-style:normal;}
+@font-face{font-family:'General Sans';src:url('https://cdn.fontshare.com/wf/KWXO5X3YW4X7OLUMPO4X24HQJGJU7E2Q/VOWUQZS3YLP66ZHPTXAFSH6YACY4WJHT/NIQ54PVBBIWVK3PFSOIOUJSXIJ5WTNDP.woff2') format('woff2');font-weight:700;font-display:swap;font-style:normal;}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="400" fill="#181818"/>
+<rect x="120" y="120" width="160" height="160" rx="6" fill="#faf9f6"/>
+<text x="200" y="232" font-family="Georgia, serif" font-size="120" font-style="italic" fill="#181818" text-anchor="middle">C</text>
+</svg>
+</template>
+<div id="root"></div>
+
+<script src="data.js"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="hero.jsx"></script>
+<script type="text/babel" src="sections.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+
+</body>
+</html>
