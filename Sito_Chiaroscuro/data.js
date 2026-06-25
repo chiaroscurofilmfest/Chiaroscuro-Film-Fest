@@ -212,7 +212,7 @@ const COPY = {
       title: "Una rete di cultura, cinema e territorio.",
       items: [
         { name: "Cinema Conca Verde", role: "Sede ufficiale" },
-        { name: "Alpha Charlie Production", role: "Casa di produzione partner" },
+        { name: "Alpha Charlie Production", role: "Powered by" },
         { name: "Mandelli Arte\n\n", role: "Collaborazione artistica" },
         { name: "Edizioni Pulcinoelefante", role: "Premio speciale 2025" },
       ],
