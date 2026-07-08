@@ -88,7 +88,7 @@ function SectionHead({ eyebrow, title, lede, idx, rhs }) {
         )}
         {title && <h2 className="h-1">{title}</h2>}
       </div>
-      {(lede || rhs) && <div className="rhs body">{lede || rhs}</div>}
+      {(lede || rhs) && <div className="rhs body" dangerouslySetInnerHTML={{ __html: lede || rhs }} />}
     </div>
   );
 }
@@ -192,7 +192,7 @@ function Nav({ t, lang, setLang, onOpenTweaks, theme }) {
       <a className="nav-logo" href="index.html" aria-label="Chiaroscuro Film Fest — home">
         <img
           className="nav-logotype"
-          src={effectiveTheme === "dark" ? "assets/logotype-mark-white.png" : "assets/logotype-mark-black.png"}
+          src={RES(effectiveTheme === "dark" ? "assets/logotype-mark-white.png" : "assets/logotype-mark-black.png")}
           alt="Chiaroscuro"
         />
       </a>
@@ -276,7 +276,7 @@ function Footer({ t, lang }) {
       </div>
 
       <div className="foot-wordmark" aria-hidden="true">
-        <img src="assets/logotype-mark-white.png" alt="Chiaroscuro" />
+        <img src={RES("assets/logotype-footer-white.png")} alt="Chiaroscuro" />
       </div>
 
       <div className="foot-bottom">

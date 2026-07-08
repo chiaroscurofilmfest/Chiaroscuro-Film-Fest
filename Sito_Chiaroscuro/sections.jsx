@@ -19,7 +19,7 @@ function AtmosphereDivider({ src, videoId, caption, alt, height = "70vh", ratio 
               style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0, display: "block" }}
             />
           ) : (
-            <img src={src} alt={alt || ""} loading="lazy"
+            <img src={RES(src)} alt={alt || ""} loading="lazy"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           )}
         </div>
@@ -150,7 +150,7 @@ function WinnersSection({ t, lang }) {
             <article className="winner" key={i}>
               <div className="winner-poster">
                 {f.poster
-                  ? <img src={f.poster} alt={`${f.title} — locandina`} loading="lazy" />
+                  ? <img src={RES(f.poster)} alt={`${f.title} — locandina`} loading="lazy" />
                   : <Placeholder ratio="2/3" label={f.title} />
                 }
                 <div className="winner-badge">
@@ -176,12 +176,6 @@ function WinnersSection({ t, lang }) {
             </article>
           ))}
         </div>
-        <div style={{ marginTop: 40, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
-          <span className="kicker">{lang === "it" ? "Quattro premi principali · quindici riconoscimenti" : "Four main awards · fifteen honours"}</span>
-          <a className="link-arrow" href="#albo">
-            {t.winners.cta} <span className="arrow" />
-          </a>
-        </div>
       </div>
     </section>
   );
@@ -199,7 +193,7 @@ function JurySection({ t, lang }) {
       <article className="jury-lead">
         <div className="jury-lead-portrait">
           {president.portrait
-            ? <img src={president.portrait} alt={president.name} loading="lazy" />
+            ? <img src={RES(president.portrait)} alt={president.name} loading="lazy" />
             : <Placeholder ratio="4/5" label={president.name} />
           }
           <div className="jury-lead-tag">
@@ -220,14 +214,14 @@ function JurySection({ t, lang }) {
           <article className="juror" key={i}>
             <div className="juror-portrait">
               {p.portrait
-                ? <img src={p.portrait} alt={p.name} loading="lazy" />
+                ? <img src={RES(p.portrait)} alt={p.name} loading="lazy" />
                 : <Placeholder ratio="4/5" label={p.name} />
               }
             </div>
             <div className="juror-meta">
               <h4 className="juror-name">{p.name}</h4>
               <div className="juror-role">{p.role}</div>
-              {p.bio && <p className="juror-bio">{p.bio}</p>}
+              {p.bio && <p className="juror-bio" dangerouslySetInnerHTML={{ __html: p.bio }} />}
             </div>
           </article>
         ))}
@@ -246,7 +240,7 @@ function GuestsSection({ t, lang }) {
           <div className="person" key={i}>
             <div className="portrait-wrap">
               {p.portrait
-                ? <img className="portrait-img" src={p.portrait} alt={p.name} loading="lazy" />
+                ? <img className="portrait-img" src={RES(p.portrait)} alt={p.name} loading="lazy" />
                 : <Placeholder ratio="4/5" label={p.name} />}
             </div>
             <div className="name">{p.name}</div>
@@ -274,7 +268,7 @@ function IncontraSection({ t, lang }) {
             <a key={i} href={r.href} target="_blank" rel="noopener"
                style={{ position: "relative", aspectRatio: "9/16", overflow: "hidden", background: "#0a0a0a", display: "block" }}
                className="reel">
-              <img src={r.src} alt={r.label} loading="lazy"
+              <img src={RES(r.src)} alt={r.label} loading="lazy"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 600ms cubic-bezier(.2,.7,.2,1), filter 320ms ease", filter: "brightness(0.8)" }} />
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.6) 100%)" }} />
               <div style={{ position: "absolute", left: 14, bottom: 14, color: "var(--paper)", display: "flex", alignItems: "center", gap: 10 }}>
@@ -313,20 +307,20 @@ function AtmosphereGallery({ t, lang }) {
         eyebrow={lang === "it" ? "Atmosfera 2025" : "Atmosphere 2025"}
         title={lang === "it" ? "Tre serate al Cinema Conca Verde." : "Three evenings at Cinema Conca Verde."}
         rhs={lang === "it"
-          ? "Cinema, conversazioni, premi.\nFrammenti dalla seconda edizione."
+          ? "Musica, conversazioni, premi.\nFrammenti dalla seconda edizione."
           : "Cinema, conversations, awards.\nFragments from the second edition."}
       />
       <div className="gallery-grid">
         <a className="gallery-cell big" style={{ gridArea: "big" }}>
-          <img src="assets/atmosphere/foyer.jpg" alt={lang === "it" ? "Foyer · programmi" : "Foyer · programmes"} loading="lazy" />
+          <img src={RES("assets/atmosphere/foyer.jpg")} alt={lang === "it" ? "Foyer · programmi" : "Foyer · programmes"} loading="lazy" />
           <span className="gallery-cap">{lang === "it" ? "Foyer · programmi" : "Foyer · programmes"}</span>
         </a>
         <a className="gallery-cell" style={{ gridArea: "a" }}>
-          <img src="assets/atmosphere/sonorizzazione-annoni.png" alt={lang === "it" ? "Sonorizzazione live · Edmondo Annoni" : "Live scoring · Edmondo Annoni"} loading="lazy" />
+          <img src={RES("assets/atmosphere/sonorizzazione-annoni.png")} alt={lang === "it" ? "Sonorizzazione live · Edmondo Annoni" : "Live scoring · Edmondo Annoni"} loading="lazy" />
           <span className="gallery-cap">{lang === "it" ? "Sonorizzazione live · Edmondo Annoni" : "Live scoring · Edmondo Annoni"}</span>
         </a>
         <a className="gallery-cell" style={{ gridArea: "b" }}>
-          <img src="assets/atmosphere/award-experimental.jpg" alt={lang === "it" ? "Premiazione · Best Experimental" : "Award · Best Experimental"} loading="lazy" />
+          <img src={RES("assets/atmosphere/award-experimental.jpg")} alt={lang === "it" ? "Premiazione · Best Experimental" : "Award · Best Experimental"} loading="lazy" />
           <span className="gallery-cap">{lang === "it" ? "Premiazione · Best Experimental" : "Award · Best Experimental"}</span>
         </a>
       </div>
@@ -441,21 +435,28 @@ function AlboOroSection({ t, lang }) {
         eyebrow={lang === "it" ? "Albo d'oro · 2025" : "Roll of honour · 2025"}
         title={lang === "it" ? "Tutti i premi della II edizione." : "The complete 2025 palmarès."}
       />
-      <div className="schedule" style={{ borderTop: "1px solid var(--line-strong)" }}>
-        {window.ARCHIVE_2025.awards.map((a, i) => (
-          <div className="slot" key={i} style={{ gridTemplateColumns: "minmax(180px, 0.95fr) 1.25fr 1.1fr 110px", alignItems: "center" }}>
-            <span className="cat">{lang === "it" ? a.award_it : a.award_en}</span>
-            <div className="body">
-              <div className="name">{a.title}</div>
-              <div className="meta">{a.director}</div>
+      <details className="albo-collapse">
+        <summary>
+          <span className="albo-summary-label" data-open={lang === "it" ? "Riduci l'albo completo" : "Hide the full palmarès"} data-closed={lang === "it" ? "Espandi l'albo completo" : "Show the full palmarès"} />
+          <span className="albo-summary-count">{window.ARCHIVE_2025.awards.length} {lang === "it" ? "riconoscimenti" : "honours"}</span>
+          <span className="albo-chevron" aria-hidden="true" />
+        </summary>
+        <div className="schedule">
+          {window.ARCHIVE_2025.awards.map((a, i) => (
+            <div className="slot" key={i} style={{ gridTemplateColumns: "minmax(180px, 0.95fr) 1.25fr 1.1fr 110px", alignItems: "center" }}>
+              <span className="cat">{lang === "it" ? a.award_it : a.award_en}</span>
+              <div className="body">
+                <div className="name">{a.title}</div>
+                <div className="meta">{a.director}</div>
+              </div>
+              <div className="body">
+                <div className="meta" style={{ textTransform: "none", letterSpacing: "0.02em", color: a.recipient ? "var(--fg-dim)" : "var(--fg-faint)" }}>{a.recipient || "—"}</div>
+              </div>
+              <span className="time" style={{ textAlign: "right" }}>{a.country}</span>
             </div>
-            <div className="body">
-              <div className="meta" style={{ textTransform: "none", letterSpacing: "0.02em", color: a.recipient ? "var(--fg-dim)" : "var(--fg-faint)" }}>{a.recipient || "—"}</div>
-            </div>
-            <span className="time" style={{ textAlign: "right" }}>{a.country}</span>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </details>
     </section>
   );
 }

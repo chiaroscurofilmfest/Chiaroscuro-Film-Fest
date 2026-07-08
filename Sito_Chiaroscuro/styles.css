@@ -100,6 +100,46 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase;
   color: var(--fg-dim);
 }
+
+/* albo d'oro — collapsible palmarès */
+.albo-collapse { border-top: 1px solid var(--line); }
+.albo-collapse > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+  user-select: none;
+}
+.albo-collapse > summary::-webkit-details-marker { display: none; }
+.albo-summary-label {
+  font-family: var(--f-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+.albo-summary-label::before { content: attr(data-closed); }
+.albo-collapse[open] .albo-summary-label::before { content: attr(data-open); }
+.albo-summary-count {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.albo-chevron {
+  margin-left: auto;
+  width: 12px;
+  height: 12px;
+  border-right: 1.5px solid var(--fg-dim);
+  border-bottom: 1.5px solid var(--fg-dim);
+  transform: rotate(45deg);
+  transition: transform 220ms ease, border-color 200ms ease;
+}
+.albo-collapse > summary:hover .albo-chevron { border-color: var(--fg); }
+.albo-collapse[open] > summary .albo-chevron { transform: rotate(225deg); }
 .h-display {
   font-family: var(--f-display);
   font-weight: 500;

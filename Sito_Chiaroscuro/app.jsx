@@ -111,7 +111,7 @@ function App() {
           onChange={(v) => setTweak("heroVariant", v)}
         />
         <TweakToggle
-          label={lang === "it" ? "Animazione doppia O" : "Double-O animation"}
+          label={lang === "it" ? "Animazione del marchio “oo”" : "“oo” logo mark animation"}
           value={t.animO}
           onChange={(v) => setTweak("animO", v)}
         />

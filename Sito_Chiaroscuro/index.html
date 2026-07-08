@@ -18,6 +18,67 @@
 
 <link rel="icon" href="assets/symbol-black.png">
 
+<!-- Standalone-bundle asset manifest: these images are referenced as strings in JS/JSX,
+     so the inliner can't auto-discover them. RES() resolves each to a blob URL when bundled,
+     and falls back to the plain path in normal (served) mode. -->
+<meta name="ext-resource-dependency" content="assets/posters/the-steak.jpg" data-resource-id="poster-steak" />
+<meta name="ext-resource-dependency" content="assets/posters/padre.jpg" data-resource-id="poster-padre" />
+<meta name="ext-resource-dependency" content="assets/posters/il-mare-breve.jpg" data-resource-id="poster-mare" />
+<meta name="ext-resource-dependency" content="assets/posters/playing-god.jpg" data-resource-id="poster-god" />
+<meta name="ext-resource-dependency" content="assets/jury/alessio-boni.webp" data-resource-id="jury-boni" />
+<meta name="ext-resource-dependency" content="assets/jury/hilary-tiscione.jpg" data-resource-id="jury-tiscione" />
+<meta name="ext-resource-dependency" content="assets/jury/erika-ponti.webp" data-resource-id="jury-ponti" />
+<meta name="ext-resource-dependency" content="assets/jury/daniele-pini.png" data-resource-id="jury-pini" />
+<meta name="ext-resource-dependency" content="assets/guests/naja.jpg" data-resource-id="guest-naja" />
+<meta name="ext-resource-dependency" content="assets/guests/carrieri.jpg" data-resource-id="guest-carrieri" />
+<meta name="ext-resource-dependency" content="assets/guests/tufarulo.jpg" data-resource-id="guest-tufarulo" />
+<meta name="ext-resource-dependency" content="assets/guests/canovi.jpg" data-resource-id="guest-canovi" />
+<meta name="ext-resource-dependency" content="assets/atmosphere/reel-sorrentino.png" data-resource-id="reel-sorrentino" />
+<meta name="ext-resource-dependency" content="assets/atmosphere/reel-mastandrea.png" data-resource-id="reel-mastandrea" />
+<meta name="ext-resource-dependency" content="assets/atmosphere/reel-samani.png" data-resource-id="reel-samani" />
+<meta name="ext-resource-dependency" content="assets/atmosphere/foyer.jpg" data-resource-id="atmo-foyer" />
+<meta name="ext-resource-dependency" content="assets/atmosphere/sonorizzazione-annoni.png" data-resource-id="atmo-sonor" />
+<meta name="ext-resource-dependency" content="assets/atmosphere/award-experimental.jpg" data-resource-id="atmo-award" />
+<meta name="ext-resource-dependency" content="assets/logotype-mark-white.png" data-resource-id="logo-white" />
+<meta name="ext-resource-dependency" content="assets/logotype-footer-white.png" data-resource-id="logo-footer-white" />
+<meta name="ext-resource-dependency" content="assets/logotype-mark-black.png" data-resource-id="logo-black" />
+<script>
+(function(){
+  // Static path -> resource-id map (must match the data-resource-id values above).
+  // The inliner strips the <meta> tags at runtime, so the map can't be read from them.
+  var map = {
+    "assets/posters/the-steak.jpg":"poster-steak",
+    "assets/posters/padre.jpg":"poster-padre",
+    "assets/posters/il-mare-breve.jpg":"poster-mare",
+    "assets/posters/playing-god.jpg":"poster-god",
+    "assets/jury/alessio-boni.webp":"jury-boni",
+    "assets/jury/hilary-tiscione.jpg":"jury-tiscione",
+    "assets/jury/erika-ponti.webp":"jury-ponti",
+    "assets/jury/daniele-pini.png":"jury-pini",
+    "assets/guests/naja.jpg":"guest-naja",
+    "assets/guests/carrieri.jpg":"guest-carrieri",
+    "assets/guests/tufarulo.jpg":"guest-tufarulo",
+    "assets/guests/canovi.jpg":"guest-canovi",
+    "assets/atmosphere/reel-sorrentino.png":"reel-sorrentino",
+    "assets/atmosphere/reel-mastandrea.png":"reel-mastandrea",
+    "assets/atmosphere/reel-samani.png":"reel-samani",
+    "assets/atmosphere/foyer.jpg":"atmo-foyer",
+    "assets/atmosphere/sonorizzazione-annoni.png":"atmo-sonor",
+    "assets/atmosphere/award-experimental.jpg":"atmo-award",
+    "assets/logotype-mark-white.png":"logo-white",
+    "assets/logotype-footer-white.png":"logo-footer-white",
+    "assets/logotype-mark-black.png":"logo-black"
+  };
+  // RES(path): blob URL when bundled offline, else the original path.
+  window.RES = function(p){
+    if (!p) return p;
+    var id = map[p];
+    if (id && window.__resources && window.__resources[id]) return window.__resources[id];
+    return p;
+  };
+})();
+</script>
+
 <!-- Fonts: General Sans + Cabinet Grotesk via Fontshare; Instrument Serif + JetBrains Mono via Google -->
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">

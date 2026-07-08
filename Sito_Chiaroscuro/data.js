@@ -38,8 +38,8 @@ const COPY = {
     },
     about: {
       eyebrow: "Manifesto",
-      title: "Il cinema breve come necessità.",
-      lede: "Chiaroscuro è un festival internazionale di cortometraggi con sede a Bergamo, Lombardia.\nDal 2024 porta in Italia opere di cinema indipendente da tutto il mondo — narrative, documentarie, sperimentali — in dialogo con il pubblico e con l'industria.\n",
+      title: "Il cinema che non hai ancora visto.",
+      lede: "Festival internazionale di cortometraggi a <b>Bergamo</b>. Dal 2024 porta in Italia opere di <b>cinema emergente e indipendente</b> da tutto il mondo — film narrativi, documentari, sperimentali — in dialogo con il pubblico e con l'industria.\n",
       items: [
         {
           n: "\n",
@@ -61,12 +61,12 @@ const COPY = {
     submit: {
       eyebrow: "Iscrizioni 2026",
       title: "Mostra il tuo corto a Bergamo.",
-      lede: "Le iscrizioni alla terza edizione sono aperte su FilmFreeway. Cerchiamo opere di finzione, documentario e animazione fino a 15 minuti.",
+      lede: "Le iscrizioni alla terza edizione sono aperte su <b>FilmFreeway</b>. Cerchiamo opere di finzione, documentario e animazione fino a 15 minuti.",
       categories: [
         { k: "BEST INTERNATIONAL", v: "Cortometraggi da tutto il mondo" },
         { k: "BEST ITALIAN", v: "La nuova generazione del cinema italiano" },
-        { k: "BEST DOCUMENTARY", v: "Sguardi del reale, brevi e radicali" },
-        { k: "BEST ANIMATION", v: "Linguaggi e tecniche d'animazione" },
+        { k: "BEST DOCUMENTARY", v: "Sguardi del reale, brevi e urgenti" },
+        { k: "BEST ANIMATION", v: "Linguaggi e tecniche d'animazione a confronto" },
       ],
       deadlines: [
         { k: "Early bird", v: "31 Marzo 2026" },
@@ -130,19 +130,19 @@ const COPY = {
         {
           name: "Hilary Tiscione",
           role: "Scrittrice, critica, regista",
-          bio: "Coordinatrice del Master in Sceneggiatura dell'Università IULM. Nel 2025 ha diretto il documentario Cannibali.",
+          bio: "Coordinatrice del Master in Sceneggiatura dell'<b>Università IULM</b>. Nel 2025 ha diretto il documentario Cannibali.",
           portrait: "assets/jury/hilary-tiscione.jpg",
         },
         {
           name: "Erika Ponti",
           role: "Producer · Oki Doki Film",
-          bio: "Founder & CEO di Oki Doki Film. Producer e già Artistic Director di un festival di cortometraggi.",
+          bio: "Founder & CEO di <b>Oki Doki Film</b>. Producer e già Artistic Director di un festival di cortometraggi.",
           portrait: "assets/jury/erika-ponti.webp",
         },
         {
           name: "Daniele Pini",
           role: "Regista, sceneggiatore",
-          bio: "Ha diretto corti premiati in numerosi festival. Nel 2020 ha diretto il documentario Impressionisti Segreti.",
+          bio: "Ha diretto corti premiati in numerosi festival. Nel 2020 ha diretto il documentario <b>Impressionisti Segreti</b>.",
           portrait: "assets/jury/daniele-pini.png",
         },
       ],
@@ -169,7 +169,7 @@ const COPY = {
     },
     incontra: {
       eyebrow: "Social media",
-      title: "Chiaroscuro Incontra.",
+      title: "Chiaroscuro incontra.",
       lede: "Conversazioni con registi e ospiti durante le serate al Cinema Conca Verde. Film, carriera, linguaggio, visione.",
       past: ["Zingaretti", "Mastandrea", "Sorrentino", "Aureliano Amadei", "Laura Samani", "Naja Phạm Lockwood"],
       cta: "Guarda i reel su Instagram",
