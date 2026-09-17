@@ -996,11 +996,10 @@ footer.foot { padding-top: clamp(72px, 7.5vw, 112px); }
 
 /* partners */
 .partners {
-  display: grid; grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(2, 1fr);
   border: 1px solid var(--line);
-  border-bottom: 0;
 }
-@media (max-width: 800px) { .partners { grid-template-columns: repeat(2, 1fr); } }
+
 .partner {
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -1009,26 +1008,12 @@ footer.foot { padding-top: clamp(72px, 7.5vw, 112px); }
   display: flex; flex-direction: column; justify-content: space-between; gap: 12px;
   position: relative;
 }
-.partner:last-child { border-right: 0; }
-@media (max-width: 800px) {
-  .partner:nth-child(2n) { border-right: 0; }
-}
+.partner:nth-child(2n) { border-right: 0; }
+.partner:nth-child(n+3) { border-bottom: 0; }
 .partner-logo {
   align-self: flex-start; width: auto; height: var(--logo-h, 52px);
   max-width: 100%; object-fit: contain; object-position: left center; margin: 10px 0 6px;
 }
-.patronage {
-  display: flex; align-items: center; gap: 28px;
-  border: 1px solid var(--line); border-top: 0;
-  padding: 28px 24px;
-}
-.patronage img { height: 176px; width: auto; flex: none; }
-.patronage .role {
-  font-family: var(--f-mono); font-size: 10.5px;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-dim); margin-bottom: 8px;
-}
-.patronage .name { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
-@media (max-width: 600px) { .patronage { gap: 20px; } .patronage img { height: 120px; } }
 .partner .name {
   font-size: 18px; font-weight: 600; letter-spacing: -0.005em;
 }

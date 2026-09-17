@@ -358,7 +358,7 @@ function PartnersSection({ t, lang }) {
     <section id="partner" className="shell">
       <SectionHead idx="§ 12" eyebrow={t.partners.eyebrow} title={t.partners.title} />
       <div className="partners">
-        {t.partners.items.filter((p) => !p.patronage).map((p, i) => (
+        {t.partners.items.map((p, i) => (
           <div className="partner" key={i}>
             <div className="role">{p.role}</div>
             {p.logo ? <img className="partner-logo" src={RES(p.logo)} alt={p.name} style={{ "--logo-h": p.logoH || "52px" }} /> : null}
@@ -366,15 +366,6 @@ function PartnersSection({ t, lang }) {
           </div>
         ))}
       </div>
-      {t.partners.items.filter((p) => p.patronage).map((p, i) => (
-        <div className="patronage" key={i}>
-          <img src={RES(p.logo)} alt={p.name} />
-          <div>
-            <div className="role">{p.role}</div>
-            <div className="name">{p.name}</div>
-          </div>
-        </div>
-      ))}
       <div style={{ marginTop: 28, display: "flex", justifyContent: "flex-end" }}>
         <a className="link-arrow" href={`mailto:chiaroscurofilmfest@gmail.com?subject=Partner%202026`}>
           {t.partners.become} <span className="arrow" />
