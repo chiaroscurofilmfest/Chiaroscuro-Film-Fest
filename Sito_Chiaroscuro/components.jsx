@@ -282,7 +282,7 @@ function Footer({ t, lang }) {
       <div className="foot-bottom">
         <span>{t.footer.colophon}</span>
         <span style={{ display: "inline-flex", gap: 20 }}>
-          {t.footer.legal.map((l, i) => <a key={i} href="#" style={{ color: "inherit" }}>{l}</a>)}
+          {t.footer.legal.map((l, i) => <a key={i} href={/trasparen/i.test(l) ? "trasparenza.html" : "#"} style={{ color: "inherit" }}>{l}</a>)}
         </span>
       </div>
     </footer>

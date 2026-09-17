@@ -102,44 +102,50 @@ img { display: block; max-width: 100%; }
 }
 
 /* albo d'oro — collapsible palmarès */
-.albo-collapse { border-top: 1px solid var(--line); }
+.albo-collapse { border-top: 0; }
 .albo-collapse > summary {
   list-style: none;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 16px;
-  padding: 24px 0;
+  gap: 12px;
+  padding: 13px 20px;
+  margin: 8px 0 0;
+  background: var(--yellow);
+  color: var(--ink);
+  border-radius: 2px;
   user-select: none;
+  transition: transform 200ms ease, filter 200ms ease;
 }
+.albo-collapse > summary:hover { transform: translateY(-1px); }
 .albo-collapse > summary::-webkit-details-marker { display: none; }
 .albo-summary-label {
   font-family: var(--f-mono);
-  font-size: 13px;
-  letter-spacing: 0.06em;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--fg);
+  color: var(--ink);
 }
 .albo-summary-label::before { content: attr(data-closed); }
 .albo-collapse[open] .albo-summary-label::before { content: attr(data-open); }
 .albo-summary-count {
   font-family: var(--f-mono);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--fg-faint);
+  color: rgba(24, 24, 24, 0.6);
 }
 .albo-chevron {
-  margin-left: auto;
-  width: 12px;
-  height: 12px;
-  border-right: 1.5px solid var(--fg-dim);
-  border-bottom: 1.5px solid var(--fg-dim);
-  transform: rotate(45deg);
-  transition: transform 220ms ease, border-color 200ms ease;
+  width: 9px;
+  height: 9px;
+  border-right: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 220ms ease;
 }
-.albo-collapse > summary:hover .albo-chevron { border-color: var(--fg); }
-.albo-collapse[open] > summary .albo-chevron { transform: rotate(225deg); }
+.albo-collapse[open] > summary .albo-chevron { transform: rotate(225deg) translate(-2px, -2px); }
+.albo-collapse[open] .schedule { margin-top: 28px; border-top: 1px solid var(--line); }
 .h-display {
   font-family: var(--f-display);
   font-weight: 500;
@@ -990,7 +996,7 @@ footer.foot { padding-top: clamp(72px, 7.5vw, 112px); }
 
 /* partners */
 .partners {
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--line);
   border-bottom: 0;
 }
@@ -1007,6 +1013,22 @@ footer.foot { padding-top: clamp(72px, 7.5vw, 112px); }
 @media (max-width: 800px) {
   .partner:nth-child(2n) { border-right: 0; }
 }
+.partner-logo {
+  align-self: flex-start; width: auto; height: var(--logo-h, 52px);
+  max-width: 100%; object-fit: contain; object-position: left center; margin: 10px 0 6px;
+}
+.patronage {
+  display: flex; align-items: center; gap: 28px;
+  border: 1px solid var(--line); border-top: 0;
+  padding: 28px 24px;
+}
+.patronage img { height: 176px; width: auto; flex: none; }
+.patronage .role {
+  font-family: var(--f-mono); font-size: 10.5px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-dim); margin-bottom: 8px;
+}
+.patronage .name { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+@media (max-width: 600px) { .patronage { gap: 20px; } .patronage img { height: 120px; } }
 .partner .name {
   font-size: 18px; font-weight: 600; letter-spacing: -0.005em;
 }

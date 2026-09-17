@@ -59,9 +59,9 @@ const COPY = {
       ],
     },
     submit: {
-      eyebrow: "Iscrizioni 2026",
+      eyebrow: "Iscrizioni 2027",
       title: "Mostra il tuo corto a Bergamo.",
-      lede: "Le iscrizioni alla terza edizione sono aperte su <b>FilmFreeway</b>. Cerchiamo opere di finzione, documentario e animazione fino a 15 minuti.",
+      lede: "Le iscrizioni alla quarta edizione aprono il 1° ottobre su <b>FilmFreeway</b>. Cerchiamo opere di finzione, documentario e animazione fino a 15 minuti.",
       categories: [
         { k: "BEST INTERNATIONAL", v: "Cortometraggi da tutto il mondo" },
         { k: "BEST ITALIAN", v: "La nuova generazione del cinema italiano" },
@@ -69,26 +69,26 @@ const COPY = {
         { k: "BEST ANIMATION", v: "Linguaggi e tecniche d'animazione a confronto" },
       ],
       deadlines: [
-        { k: "Early bird", v: "31 Marzo 2026" },
-        { k: "Regular", v: "30 Giugno 2026" },
-        { k: "Late", v: "31 Luglio 2026" },
-        { k: "Notifica", v: "Settembre 2026" },
+        { k: "Early bird", v: "31 Marzo 2027" },
+        { k: "Regular", v: "30 Giugno 2027" },
+        { k: "Late", v: "31 Luglio 2027" },
+        { k: "Notifica", v: "Settembre 2027" },
       ],
       cta: "Iscrivi su FilmFreeway",
     },
     stats: {
-      eyebrow: "Edizione II · 2025",
+      eyebrow: "Edizione III · 2026",
       title: "Il festival in cifre.",
       items: [
-        { n: "250+", l: "Opere iscritte" },
-        { n: "35", l: "Paesi rappresentati" },
-        { n: "25", l: "Film in concorso" },
+        { n: "280+", l: "Opere iscritte" },
+        { n: "38", l: "Paesi rappresentati" },
+        { n: "18", l: "Film in concorso" },
       ],
     },
     winners: {
       eyebrow: "Vincitori 2025",
       title: "I quattro premi principali.",
-      lede: "I riconoscimenti delle categorie in concorso, scelti da una giuria di registi, sceneggiatori, attori e produttori.",
+      lede: "I riconoscimenti delle categorie in concorso, scelti da una <b>giuria</b> di registi, sceneggiatori, attori e produttori.",
       items: [
         {
           award: "Best International", title: "The Steak",
@@ -124,7 +124,7 @@ const COPY = {
         {
           name: "Alessio Boni",
           role: "Presidente di Giuria · Attore",
-          bio: "Tra i più riconoscibili interpreti italiani della sua generazione. Ha lavorato con Marco Tullio Giordana, Ferzan Özpetek e Cristina Comencini attraversando cinema, teatro e televisione.\n",
+          bio: "Tra i più riconoscibili interpreti italiani della sua generazione. Ha lavorato con Marco Tullio Giordana, Ferzan Özpetek e Cristina Comencini attraversando <b>cinema</b>, <b>teatro</b> e <b>televisione</b>.\n",
           portrait: "assets/jury/alessio-boni.webp",
         },
         {
@@ -170,7 +170,7 @@ const COPY = {
     incontra: {
       eyebrow: "Social media",
       title: "Chiaroscuro incontra.",
-      lede: "Conversazioni con registi e ospiti durante le serate al Cinema Conca Verde. Film, carriera, linguaggio, visione.",
+      lede: "<b>Conversazioni</b> con registi e ospiti durante le serate al Cinema Conca Verde. Film, carriera, linguaggio, visione.",
       past: ["Zingaretti", "Mastandrea", "Sorrentino", "Aureliano Amadei", "Laura Samani", "Naja Phạm Lockwood"],
       cta: "Guarda i reel su Instagram",
     },
@@ -211,10 +211,10 @@ const COPY = {
       eyebrow: "Partner",
       title: "Una rete di cultura, cinema e territorio.",
       items: [
-        { name: "Cinema Conca Verde", role: "Sede ufficiale" },
-        { name: "Alpha Charlie Production", role: "Powered by" },
-        { name: "Mandelli Arte\n\n", role: "Collaborazione artistica" },
-        { name: "Edizioni Pulcinoelefante", role: "Premio speciale 2025" },
+        { name: "Cinema Conca Verde", role: "Sede ufficiale", logo: "assets/partners/conca-verde.png", logoH: "46px" },
+        { name: "Alpha Charlie Production", role: "Powered by", logo: "assets/partners/alpha-charlie.png", logoH: "38px" },
+        { name: "Mandelli Arte", role: "Collaborazione artistica", logo: "assets/partners/mandelli-arte.png", logoH: "64px" },
+        { name: "Comune di Bergamo", role: "Con il patrocinio di", logo: "assets/partners/comune-bergamo-crest.png", patronage: true },
       ],
       become: "Diventa partner",
     },
@@ -230,7 +230,7 @@ const COPY = {
     },
     footer: {
       tagline: "Cinema breve, emergente, a Bergamo.",
-      colophon: "© 2026 Chiaroscuro Film Fest — Tutti i diritti riservati.",
+      colophon: "© 2026 CHIAROSCURO FILM FEST — UN PROGETTO DI CHIAROSCURO ETS, C.F. 95269850160 — TUTTI I DIRITTI RISERVATI.",
       legal: ["Privacy", "Cookie", "Trasparenza"],
     },
   },
@@ -300,15 +300,15 @@ const COPY = {
       eyebrow: "II Edition · 2025",
       title: "The festival in numbers.",
       items: [
-        { n: "250+", l: "Submissions" },
-        { n: "35",   l: "Countries" },
-        { n: "25",   l: "Films screened" },
+        { n: "280+", l: "Submissions" },
+        { n: "38",   l: "Countries" },
+        { n: "18",   l: "Films screened" },
       ],
     },
     winners: {
       eyebrow: "2025 Winners",
       title: "The four main awards.",
-      lede: "The competition-category awards, selected by a jury of directors, writers, actors and producers. The full palmarès — craft and special awards — is in the archive.",
+      lede: "The competition-category awards, selected by a <b>jury</b> of directors, writers, actors and producers. The full palmarès — craft and special awards — is in the archive.",
       items: [
         {
           award: "Best International", title: "The Steak",
@@ -431,10 +431,10 @@ const COPY = {
       eyebrow: "Partners",
       title: "A network of culture, cinema, territory.",
       items: [
-        { name: "Cinema Conca Verde",       role: "Official venue" },
-        { name: "Alpha Charlie Production", role: "Production house partner" },
-        { name: "Mandelli Arte",            role: "Artistic collaboration" },
-        { name: "Edizioni Pulcinoelefante", role: "2025 Special Award" },
+        { name: "Cinema Conca Verde",       role: "Official venue", logo: "assets/partners/conca-verde.png", logoH: "46px" },
+        { name: "Alpha Charlie Production", role: "Powered by", logo: "assets/partners/alpha-charlie.png", logoH: "38px" },
+        { name: "Mandelli Arte",            role: "Artistic collaboration", logo: "assets/partners/mandelli-arte.png", logoH: "64px" },
+        { name: "Comune di Bergamo",        role: "Under the patronage of", logo: "assets/partners/comune-bergamo-crest.png", patronage: true },
       ],
       become: "Become a partner",
     },
@@ -456,35 +456,32 @@ const COPY = {
   },
 };
 
-// Programme data — II Edition 2025 (the 2026 schedule is not yet defined).
+// Programme data — III Edition 2026 (28–30 September 2026).
 const PROGRAM = {
   days: [
-    { id: "d1", label: { it: "Lun 29 Set", en: "Mon Sep 29" }, full: { it: "Lunedì 29 Settembre 2025", en: "Monday, September 29, 2025" } },
-    { id: "d2", label: { it: "Mar 30 Set", en: "Tue Sep 30" }, full: { it: "Martedì 30 Settembre 2025", en: "Tuesday, September 30, 2025" } },
-    { id: "d3", label: { it: "Mer 1 Ott", en: "Wed Oct 1" }, full: { it: "Mercoledì 1 Ottobre 2025", en: "Wednesday, October 1, 2025" } },
+    { id: "d1", label: { it: "Lun 28 Set", en: "Mon Sep 28" }, full: { it: "Lunedì 28 Settembre 2026", en: "Monday, September 28, 2026" } },
+    { id: "d2", label: { it: "Mar 29 Set", en: "Tue Sep 29" }, full: { it: "Martedì 29 Settembre 2026", en: "Tuesday, September 29, 2026" } },
+    { id: "d3", label: { it: "Mer 30 Set", en: "Wed Sep 30" }, full: { it: "Mercoledì 30 Settembre 2026", en: "Wednesday, September 30, 2026" } },
   ],
   categories: {
     it: { all: "Tutto", screening: "Proiezione", talk: "Incontro", award: "Premiazione" },
     en: { all: "All",    screening: "Screening", talk: "Talk",      award: "Awards"      },
   },
   slots: [
-    // Day 1 — Lunedì 29 Settembre
-    { day: "d1", time: "18:00", cat: "screening", name_it: "Blocco di proiezioni · concorso", name_en: "Screening block · competition", meta_it: "Cortometraggi in concorso · 18:00–19:00", meta_en: "Shorts in competition · 6:00–7:00 PM" },
-    { day: "d1", time: "19:00", cat: "talk",      name_it: "Proiezione speciale · Le faremo sapere", name_en: "Special screening · Le faremo sapere", meta_it: "Con il regista Beppe Tufarulo, il protagonista Marchesi e il produttore Manzi", meta_en: "With director Beppe Tufarulo, lead actor Marchesi and producer Manzi" },
-    { day: "d1", time: "21:00", cat: "screening", name_it: "Blocco di proiezioni · concorso", name_en: "Screening block · competition", meta_it: "Cortometraggi in concorso · 21:00–23:00", meta_en: "Shorts in competition · 9:00–11:00 PM" },
-    { day: "d1", time: "23:00", cat: "award",     name_it: "Premiazioni della serata", name_en: "Evening awards", meta_it: "Il fantasma di carta · High Tide · Oro e Contanti · L'Aînée", meta_en: "Il fantasma di carta · High Tide · Oro e Contanti · L'Aînée" },
+    // Day 1 — Lunedì 28 Settembre
+    { day: "d1", time: "19:00", cat: "talk",      name_it: "Fuori concorso · Lo sguardo dell'altro", name_en: "Out of competition · Lo sguardo dell'altro", meta_it: "Proiezione e incontro con Alessio Boni e CESVI · 19:00–20:30", meta_en: "Screening and talk with Alessio Boni and CESVI · 7:00–8:30 PM" },
+    { day: "d1", time: "21:30", cat: "screening", name_it: "Primo blocco · concorso", name_en: "First block · competition", meta_it: "Unavailable (Ucraina) · Samsa (Italia) · Oltre la collina (Italia) · Petticoats (Canada) · A Thing About Kashem (Bangladesh) · 21:30–23:00", meta_en: "Unavailable (Ukraine) · Samsa (Italy) · Oltre la collina (Italy) · Petticoats (Canada) · A Thing About Kashem (Bangladesh) · 9:30–11:00 PM" },
+    { day: "d1", time: "23:00", cat: "award",     name_it: "Premiazioni della serata", name_en: "Evening awards", meta_it: "Chiusura della prima serata", meta_en: "Closing of the first evening" },
 
-    // Day 2 — Martedì 30 Settembre
-    { day: "d2", time: "18:00", cat: "screening", name_it: "Blocco di proiezioni · concorso", name_en: "Screening block · competition", meta_it: "Cortometraggi in concorso · 18:00–20:00", meta_en: "Shorts in competition · 6:00–8:00 PM" },
-    { day: "d2", time: "21:00", cat: "talk",      name_it: "Proiezione speciale · Shoes e Milk Teeth", name_en: "Special screening · Shoes & Milk Teeth", meta_it: "Il regista Giuseppe Carrieri in dialogo con Tiscione", meta_en: "Director Giuseppe Carrieri in conversation with Tiscione" },
-    { day: "d2", time: "22:00", cat: "screening", name_it: "Blocco di proiezioni · concorso", name_en: "Screening block · competition", meta_it: "Cortometraggi in concorso · 22:00–23:00", meta_en: "Shorts in competition · 10:00–11:00 PM" },
-    { day: "d2", time: "23:00", cat: "award",     name_it: "Premiazioni della serata", name_en: "Evening awards", meta_it: "Dreams Like Paper Boats · The Drowned · Il Criaturo Sintetico · Die letzte Wette", meta_en: "Dreams Like Paper Boats · The Drowned · Il Criaturo Sintetico · Die letzte Wette" },
+    // Day 2 — Martedì 29 Settembre
+    { day: "d2", time: "20:30", cat: "screening", name_it: "Primo blocco · concorso", name_en: "First block · competition", meta_it: "Vagabond (Svizzera) · Un sole bellissimo (Italia) · El pütì pèrs (Italia) · Layla (Francia) · con incontro con Willow · 20:30–22:00", meta_en: "Vagabond (Switzerland) · Un sole bellissimo (Italy) · El pütì pèrs (Italy) · Layla (France) · with a talk with Willow · 8:30–10:00 PM" },
+    { day: "d2", time: "22:00", cat: "screening", name_it: "Secondo blocco · concorso", name_en: "Second block · competition", meta_it: "Ten to Six (Regno Unito) · The Weight of Light (India) · Hold On (Italia) · 22:00–23:00", meta_en: "Ten to Six (United Kingdom) · The Weight of Light (India) · Hold On (Italy) · 10:00–11:00 PM" },
+    { day: "d2", time: "23:00", cat: "award",     name_it: "Premiazioni della serata", name_en: "Evening awards", meta_it: "Chiusura della seconda serata", meta_en: "Closing of the second evening" },
 
-    // Day 3 — Mercoledì 1 Ottobre
-    { day: "d3", time: "18:00", cat: "screening", name_it: "Blocco di proiezioni · concorso", name_en: "Screening block · competition", meta_it: "Cortometraggi in concorso · 18:00–19:00", meta_en: "Shorts in competition · 6:00–7:00 PM" },
-    { day: "d3", time: "19:00", cat: "talk",      name_it: "Proiezione speciale · On Healing Land, Birds Perch", name_en: "Special screening · On Healing Land, Birds Perch", meta_it: "Incontro con Naja Phạm Lockwood, intervistata da Silvia Locatelli", meta_en: "A conversation with Naja Phạm Lockwood, interviewed by Silvia Locatelli" },
-    { day: "d3", time: "21:00", cat: "screening", name_it: "Blocco di proiezioni · concorso", name_en: "Screening block · competition", meta_it: "Cortometraggi in concorso · 21:00–23:00", meta_en: "Shorts in competition · 9:00–11:00 PM" },
-    { day: "d3", time: "23:00", cat: "award",     name_it: "Premiazione finale · con Alberto Casiraghy", name_en: "Final awards · with Alberto Casiraghy", meta_it: "Voiceless · Il mare breve · The Distance Between Us · Padre · Playing God · The Steak", meta_en: "Voiceless · Il mare breve · The Distance Between Us · Padre · Playing God · The Steak" },
+    // Day 3 — Mercoledì 30 Settembre
+    { day: "d3", time: "20:30", cat: "screening", name_it: "Primo blocco · concorso", name_en: "First block · competition", meta_it: "Aventure FM (Canada) · Les rendez-vous (Francia) · Les Vieux (Francia) · Arthur, 1973 (Italia) · No Matter the Weather (Canada) · 20:30–22:00", meta_en: "Aventure FM (Canada) · Les rendez-vous (France) · Les Vieux (France) · Arthur, 1973 (Italy) · No Matter the Weather (Canada) · 8:30–10:00 PM" },
+    { day: "d3", time: "22:00", cat: "talk",      name_it: "Secondo blocco · Arca e incontro con Andrea Brusa", name_en: "Second block · Arca and a talk with Andrea Brusa", meta_it: "Arca (Italia) in concorso, con il regista Andrea Brusa · 22:00–23:00", meta_en: "Arca (Italy) in competition, with director Andrea Brusa · 10:00–11:00 PM" },
+    { day: "d3", time: "23:00", cat: "award",     name_it: "Premiazione finale", name_en: "Final awards", meta_it: "Chiusura della terza edizione", meta_en: "Closing of the third edition" },
   ],
 };
 

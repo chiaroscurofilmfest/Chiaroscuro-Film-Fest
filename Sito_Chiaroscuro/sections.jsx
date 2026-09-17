@@ -204,7 +204,7 @@ function JurySection({ t, lang }) {
           <div className="kicker" style={{ marginBottom: 14 }}>{lang === "it" ? "Edizione III · 2026" : "III Edition · 2026"}</div>
           <h3 className="h-2" style={{ marginBottom: 10 }}>{president.name}</h3>
           <div className="role" style={{ marginBottom: 24, fontFamily: "var(--f-mono)", fontSize: 12, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--fg-dim)" }}>{president.role}</div>
-          {president.bio && <p className="lede" style={{ color: "var(--fg)", maxWidth: "52ch" }}>{president.bio}</p>}
+          {president.bio && <p className="lede" style={{ color: "var(--fg)", maxWidth: "52ch" }} dangerouslySetInnerHTML={{ __html: president.bio }} />}
         </div>
       </article>
 
@@ -305,7 +305,7 @@ function AtmosphereGallery({ t, lang }) {
       <SectionHead
         idx="§ 11"
         eyebrow={lang === "it" ? "Atmosfera 2025" : "Atmosphere 2025"}
-        title={lang === "it" ? "Tre serate al Cinema Conca Verde." : "Three evenings at Cinema Conca Verde."}
+        title={lang === "it" ? "Attimi di festival." : "Festival moments."}
         rhs={lang === "it"
           ? "Musica, conversazioni, premi.\nFrammenti dalla seconda edizione."
           : "Cinema, conversations, awards.\nFragments from the second edition."}
@@ -358,13 +358,23 @@ function PartnersSection({ t, lang }) {
     <section id="partner" className="shell">
       <SectionHead idx="§ 12" eyebrow={t.partners.eyebrow} title={t.partners.title} />
       <div className="partners">
-        {t.partners.items.map((p, i) => (
+        {t.partners.items.filter((p) => !p.patronage).map((p, i) => (
           <div className="partner" key={i}>
             <div className="role">{p.role}</div>
+            {p.logo ? <img className="partner-logo" src={RES(p.logo)} alt={p.name} style={{ "--logo-h": p.logoH || "52px" }} /> : null}
             <div className="name">{p.name}</div>
           </div>
         ))}
       </div>
+      {t.partners.items.filter((p) => p.patronage).map((p, i) => (
+        <div className="patronage" key={i}>
+          <img src={RES(p.logo)} alt={p.name} />
+          <div>
+            <div className="role">{p.role}</div>
+            <div className="name">{p.name}</div>
+          </div>
+        </div>
+      ))}
       <div style={{ marginTop: 28, display: "flex", justifyContent: "flex-end" }}>
         <a className="link-arrow" href={`mailto:chiaroscurofilmfest@gmail.com?subject=Partner%202026`}>
           {t.partners.become} <span className="arrow" />
@@ -389,11 +399,11 @@ function ProgramSection({ t, lang }) {
     <section id="programma" className="shell">
       <SectionHead
         idx="§ 03"
-        eyebrow={lang === "it" ? "Programma · II Edizione" : "Program · II Edition"}
+        eyebrow={lang === "it" ? "Programma · III Edizione" : "Program · III Edition"}
         title={lang === "it" ? "Tre serate al Conca Verde." : "Three evenings at Conca Verde."}
         lede={lang === "it"
-          ? "La scaletta dell'edizione 2025.\nIl programma della III edizione sarà annunciato prossimamente."
-          : "The 2025 edition line-up.\nThe 2026 third-edition programme will be announced soon."}
+          ? "Dal <b>28 al 30 settembre 2026</b>: proiezioni in concorso, incontri con autori, professionisti del settore e premiazioni ogni sera."
+          : "<b>28–30 September 2026</b>: films in competition, talks with filmmakers and industry professionals, and awards every night."}
       />
       <div className="day-tabs" role="tablist" aria-label={lang === "it" ? "Giorni" : "Days"}>
         {window.PROGRAM.days.map((d) => (
