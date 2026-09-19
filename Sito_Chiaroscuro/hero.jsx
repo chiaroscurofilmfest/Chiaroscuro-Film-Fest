@@ -46,7 +46,7 @@ const HeroCountdown = ({ t, lang, animO, target }) => {
         </div>
 
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 8 }}>
-          <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
+          <a className="btn btn-yellow" href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener">
             {t.hero.cta_submit} <span className="arrow" />
           </a>
           <a className="btn btn-ghost" href="#programma">
@@ -93,7 +93,7 @@ const HeroManifesto = ({ t, lang, animO, target }) => {
               <span style={{ fontSize: 17 }}>{t.hero.venue}, {t.hero.city}</span>
             </div>
             <div style={{ display: "flex", gap: 10 }}>
-              <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
+              <a className="btn btn-yellow" href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener">
                 {t.hero.cta_submit} <span className="arrow" />
               </a>
             </div>
@@ -143,7 +143,7 @@ const HeroChiaroscuro = ({ t, lang, animO, target }) => {
 
         {/* CTA bottom */}
         <div style={{ position: "absolute", bottom: 28, left: 0, right: 0, display: "flex", justifyContent: "center", gap: 12, zIndex: 5, flexWrap: "wrap" }}>
-          <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
+          <a className="btn btn-yellow" href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener">
             {t.hero.cta_submit} <span className="arrow" />
           </a>
           <a className="btn" style={{ border: "1px solid rgba(255,255,255,.5)", color: "var(--paper)" }} href="#programma">
@@ -161,7 +161,7 @@ const HeroDot = () => (
 );
 const HeroCtas = ({ t, ghostHref = "#programma" }) => (
   <div className="hero-cta-row">
-    <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
+    <a className="btn btn-yellow" href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener">
       {t.hero.cta_submit} <span className="arrow" />
     </a>
     <a className="btn btn-ghost" href={ghostHref}>

@@ -205,7 +205,7 @@ function Nav({ t, lang, setLang, onOpenTweaks, theme }) {
         <a href="#contatti">{t.nav.contatti}</a>
       </nav>
       <div className="nav-aux">
-        <a className="btn btn-yellow nav-submit-btn" style={{ padding: "10px 16px", fontSize: 13 }} href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
+        <a className="btn btn-yellow nav-submit-btn" style={{ padding: "10px 16px", fontSize: 13 }} href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener">
           {t.nav.iscrizioni}
           <span className="arrow" />
         </a>
@@ -233,7 +233,7 @@ function Nav({ t, lang, setLang, onOpenTweaks, theme }) {
           <a href="#partner" onClick={closeMenu}>{t.nav.partner}</a>
           <a href="#contatti" onClick={closeMenu}>{t.nav.contatti}</a>
         </nav>
-        <a className="btn btn-yellow" style={{ alignSelf: "flex-start", marginTop: 8 }} href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener" onClick={closeMenu}>
+        <a className="btn btn-yellow" style={{ alignSelf: "flex-start", marginTop: 8 }} href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener" onClick={closeMenu}>
           {t.nav.iscrizioni} <span className="arrow" />
         </a>
       </div>

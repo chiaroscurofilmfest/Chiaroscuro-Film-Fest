@@ -467,13 +467,13 @@ function CTAStrip({ t, lang }) {
   return (
     <section style={{ padding: 0, borderTop: 0 }}>
       <div className="cta-strip">
-        <h2>{lang === "it" ? "Iscrizioni alla III Edizione" : "Submit to the third edition"}<br/>
+        <h2>{lang === "it" ? "Iscrizioni alla IV Edizione" : "Submit to the fourth edition"}<br/>
           <span style={{ color: "rgba(24,24,24,.55)" }}>{lang === "it" ? "aperte su FilmFreeway." : "open on FilmFreeway."}</span>
         </h2>
         <div className="rhs">
-          <span className="deadline">{lang === "it" ? "Scadenza estesa · 31 Luglio 2026" : "Extended deadline July 31, 2026"}</span>
+          <span className="deadline">{lang === "it" ? "Apertura · 1° Ottobre 2026" : "Opening October 1, 2026"}</span>
           <a className="btn btn-dark" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
-            {t.submit.cta} <span className="arrow" />
+            {t.submit.cta_strip} <span className="arrow" />
           </a>
         </div>
       </div>

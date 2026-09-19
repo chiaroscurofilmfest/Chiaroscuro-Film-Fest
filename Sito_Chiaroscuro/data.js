@@ -8,7 +8,7 @@ const COPY = {
       programma: "Programma",
       archivio: "Edizione 2025",
       giuria: "Giuria",
-      iscrizioni: "Iscrizioni",
+      iscrizioni: "Prenota ora",
       partner: "Partner",
       contatti: "Contatti",
     },
@@ -33,7 +33,8 @@ const COPY = {
       chiaro_text_dark: "Luce.",
       chiaro_text_light: "Ombra.",
       chiaro_sub: "Muovi il mouse per mettere a fuoco.",
-      cta_submit: "Iscrivi il tuo corto",
+      cta_submit: "Prenota un posto in sala",
+      cta_book: "Prenota un posto in sala",
       cta_program: "Vedi il programma",
     },
     about: {
@@ -74,7 +75,8 @@ const COPY = {
         { k: "Late", v: "31 Luglio 2027" },
         { k: "Notifica", v: "Settembre 2027" },
       ],
-      cta: "Iscrivi su FilmFreeway",
+      cta: "Iscriviti su FilmFreeway",
+      cta_strip: "Iscrizioni su FilmFreeway",
     },
     stats: {
       eyebrow: "Edizione III · 2026",
@@ -265,7 +267,8 @@ const COPY = {
       chiaro_text_dark: "Light.",
       chiaro_text_light: "Shadow.",
       chiaro_sub: "Move the mouse to focus.",
-      cta_submit: "Submit your short",
+      cta_submit: "Book a seat in the room",
+      cta_book: "Book a seat in the room",
       cta_program: "See the program",
     },
     about: {
@@ -295,6 +298,7 @@ const COPY = {
         { k: "Notification", v: "September 2026" },
       ],
       cta: "Submit on FilmFreeway",
+      cta_strip: "Submissions on FilmFreeway",
     },
     stats: {
       eyebrow: "II Edition · 2025",
