@@ -1,6 +1,6 @@
 // app.jsx — main composer for Chiaroscuro home page
 
-const TARGET_2026 = "2026-09-28T18:00:00+02:00";
+const TARGET_2026 = "2026-12-31T23:59:59+01:00"; // Earlybird deadline — submissions 2027
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "lang": "it",
@@ -43,9 +43,9 @@ function App() {
 
       <AboutSection      t={copy} lang={lang} />
       <AtmosphereDivider
-        videoId="P6QcBwsAtvE"
-        caption={lang === "it" ? "Video report · Edizione II 2025" : "Video report · II Edition 2025"}
-        alt="Chiaroscuro Film Fest 2025 — video report"
+        videoId="VPemJXzBDMg"
+        caption={lang === "it" ? "Video report · Edizione III 2026" : "Video report · III Edition 2026"}
+        alt="Chiaroscuro Film Fest 2026 — video report"
       />
       <SubmitSection     t={copy} lang={lang} />
       <ProgramSection    t={copy} lang={lang} />

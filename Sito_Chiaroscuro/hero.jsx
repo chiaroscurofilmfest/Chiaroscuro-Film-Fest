@@ -9,17 +9,17 @@ const HeroCountdown = ({ t, lang, animO, target }) => {
           <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: "50%", background: "var(--yellow)", marginRight: 10, verticalAlign: 2 }} />
           {t.hero.eyebrow}
         </span>
-        <span className="center">{t.hero.edition} — {lang === "it" ? "Bergamo, Italia" : "Bergamo, Italy"}</span>
-        <span className="right">{lang === "it" ? "Iscrizioni aperte" : "Submissions open"} ↗</span>
+        <span className="center">{lang === "it" ? "Quarta Edizione" : "Fourth Edition"} — {lang === "it" ? "Bergamo, Italia" : "Bergamo, Italy"}</span>
+        <span className="right">{lang === "it" ? "Iscrizioni 2027 aperte" : "2027 submissions open"} ↗</span>
       </div>
 
       <div className="hero-stage">
         <div className="hero-top-line">
           <div className="hero-title-stack">
-            <span className="eyebrow"><span className="idx">COUNTDOWN</span></span>
+            <span className="eyebrow"><span className="idx">EARLYBIRD DEADLINE</span></span>
             <h1 className="hero-headline">
-              {t.hero.title_a}<br />
-              {t.hero.title_b} <em>—</em> 2026
+              {lang === "it" ? "Iscrivi il tuo film" : "Submit your film"}<br />
+              {lang === "it" ? "entro il 31 Dicembre" : "by December 31"}
             </h1>
           </div>
         </div>
@@ -46,11 +46,11 @@ const HeroCountdown = ({ t, lang, animO, target }) => {
         </div>
 
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 8 }}>
-          <a className="btn btn-yellow" href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener">
+          <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
             {t.hero.cta_submit} <span className="arrow" />
           </a>
-          <a className="btn btn-ghost" href="#programma">
-            {t.hero.cta_program} <span className="arrow" />
+          <a className="btn btn-ghost" href="#iscrizioni">
+            {lang === "it" ? "Leggi il bando" : "Read the call"} <span className="arrow" />
           </a>
         </div>
       </div>
@@ -93,7 +93,7 @@ const HeroManifesto = ({ t, lang, animO, target }) => {
               <span style={{ fontSize: 17 }}>{t.hero.venue}, {t.hero.city}</span>
             </div>
             <div style={{ display: "flex", gap: 10 }}>
-              <a className="btn btn-yellow" href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener">
+              <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
                 {t.hero.cta_submit} <span className="arrow" />
               </a>
             </div>
@@ -143,7 +143,7 @@ const HeroChiaroscuro = ({ t, lang, animO, target }) => {
 
         {/* CTA bottom */}
         <div style={{ position: "absolute", bottom: 28, left: 0, right: 0, display: "flex", justifyContent: "center", gap: 12, zIndex: 5, flexWrap: "wrap" }}>
-          <a className="btn btn-yellow" href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener">
+          <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
             {t.hero.cta_submit} <span className="arrow" />
           </a>
           <a className="btn" style={{ border: "1px solid rgba(255,255,255,.5)", color: "var(--paper)" }} href="#programma">
@@ -161,7 +161,7 @@ const HeroDot = () => (
 );
 const HeroCtas = ({ t, ghostHref = "#programma" }) => (
   <div className="hero-cta-row">
-    <a className="btn btn-yellow" href="https://www.eventbrite.it/e/biglietti-chiaroscuro-film-fest-2026-1997570059822" target="_blank" rel="noopener">
+    <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
       {t.hero.cta_submit} <span className="arrow" />
     </a>
     <a className="btn btn-ghost" href={ghostHref}>
@@ -180,8 +180,8 @@ const HeroCompact = ({ t, lang, animO, target }) => {
     <section className="hero" data-variant="compact">
       <div className="hero-meta">
         <span><HeroDot />{t.hero.eyebrow}</span>
-        <span className="center">{t.hero.edition} — {lang === "it" ? "Bergamo, Italia" : "Bergamo, Italy"}</span>
-        <span className="right">{lang === "it" ? "Iscrizioni aperte" : "Submissions open"} ↗</span>
+        <span className="center">{lang === "it" ? "Quarta Edizione" : "Fourth Edition"} — {lang === "it" ? "Bergamo, Italia" : "Bergamo, Italy"}</span>
+        <span className="right">{lang === "it" ? "Iscrizioni 2027 aperte" : "2027 submissions open"} ↗</span>
       </div>
 
       <div className="hero-stage">

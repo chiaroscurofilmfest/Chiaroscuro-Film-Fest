@@ -8,7 +8,7 @@ const COPY = {
       programma: "Programma",
       archivio: "Edizione 2025",
       giuria: "Giuria",
-      iscrizioni: "Prenota ora",
+      iscrizioni: "Iscrivi il tuo film",
       partner: "Partner",
       contatti: "Contatti",
     },
@@ -33,7 +33,7 @@ const COPY = {
       chiaro_text_dark: "Luce.",
       chiaro_text_light: "Ombra.",
       chiaro_sub: "Muovi il mouse per mettere a fuoco.",
-      cta_submit: "Prenota un posto in sala",
+      cta_submit: "Iscrivi il tuo film su FilmFreeway",
       cta_book: "Prenota un posto in sala",
       cta_program: "Vedi il programma",
     },
@@ -62,7 +62,7 @@ const COPY = {
     submit: {
       eyebrow: "Iscrizioni 2027",
       title: "Mostra il tuo corto a Bergamo.",
-      lede: "Le iscrizioni alla quarta edizione aprono il 1° ottobre su <b>FilmFreeway</b>. Cerchiamo opere di finzione, documentario e animazione fino a 15 minuti.",
+      lede: "Le iscrizioni alla quarta edizione sono aperte su <b>FilmFreeway</b>. Cerchiamo opere di finzione, documentario e animazione fino a 15 minuti.",
       categories: [
         { k: "BEST INTERNATIONAL", v: "Cortometraggi da tutto il mondo" },
         { k: "BEST ITALIAN", v: "La nuova generazione del cinema italiano" },
@@ -88,33 +88,33 @@ const COPY = {
       ],
     },
     winners: {
-      eyebrow: "Vincitori 2025",
+      eyebrow: "Vincitori 2026",
       title: "I quattro premi principali.",
       lede: "I riconoscimenti delle categorie in concorso, scelti da una <b>giuria</b> di registi, sceneggiatori, attori e produttori.",
       items: [
         {
-          award: "Best International", title: "The Steak",
-          director: "Kiarash Dadgar", country: "Canada / Iran", year: "2024",
-          poster: "assets/posters/the-steak.jpg",
-          synopsis: "I preparativi per una festa di compleanno precipitano nel caos a causa di un evento terribile."
+          award: "Best Italian", title: "Arca",
+          director: "Lorenzo Quagliozzi", country: "Italia", year: "2025",
+          poster: "assets/posters/arca.jpg",
+          synopsis: "Durante la Guerra Fredda, un gruppo di registi hollywoodiani reduci dalla Seconda guerra mondiale custodisce il cinema in un programma segreto contro la fine della storia. Ottant'anni dopo, una colonia climatica tra le montagne del Nord America accoglie l'ultimo custode di quell'eredità."
         },
         {
-          award: "Best Italian", title: "Padre",
-          director: "Michele Gallone", country: "Italia", year: "2024",
-          poster: "assets/posters/padre.jpg",
-          synopsis: "In un futuro prossimo, le emozioni sono in vendita. Francesco ha venduto il suo amore per la figlia Anna — una scelta dolorosa, fatta solo perché la malattia terminale della bambina rendeva tutto inevitabile. Mario, mosso da un ambiguo spirito di sacrificio, paga il prezzo più alto che un padre possa provare."
+          award: "Best International", title: "No Matter the Weather",
+          director: "Florence Lafond", country: "Canada", year: "2025",
+          poster: "assets/posters/no-matter-the-weather.webp",
+          synopsis: "Renée, 83 anni, si rompe una caviglia e viene assistita dalla nipote Florence. La convivenza le avvicina ancora di più, ma le mette di fronte al declino della nonna."
         },
         {
-          award: "Best Documentary", title: "Il mare breve",
-          director: "Matteo Gamannossi & Riccardo Cocumarolo", country: "Italia", year: "2024",
-          poster: "assets/posters/il-mare-breve.jpg",
-          synopsis: "Da quando era giovane, come il nonno e il padre prima di lui, Hans Petur ha vissuto in totale isolamento come guardiano del faro di Akraberg — una delle rocce più remote d'Europa, alle Isole Fær Øer. L'ultima notte di vento e vuoto, deve decidere se la pensione sia davvero un premio, o se quello che desidera resti soltanto l'avventura di una solitudine perfetta, senza tempo né compagnia."
+          award: "Best Documentary", title: "The Weight of Light",
+          director: "Anna Hints", country: "India", year: "2024",
+          poster: "assets/posters/the-weight-of-light.jpeg",
+          synopsis: "Surya, una giovane raccoglitrice di rifiuti, viene costretta dal padre a un matrimonio combinato per garantirle un futuro migliore. Tra finzione e documentario, il film racconta una comunità di donne che cercano il proprio posto tra rifiuti, caldo e nozze forzate."
         },
         {
-          award: "Best Animation", title: "Playing God",
-          director: "Matteo Burani", country: "Italia", year: "2024",
-          poster: "assets/posters/playing-god.jpg",
-          synopsis: "Una scultura di creta prende vita nell'oscurità di un laboratorio, circondata da creature misteriose…"
+          award: "Premio Chiaroscuro", title: "Arthur, 1973",
+          director: "Cesare Barbieri", country: "Italia", year: "2024",
+          poster: "assets/posters/arthur-1973.jpg",
+          synopsis: "La voce di Arthur, registrata su una vecchia cassetta trovata in una cantina di Londra, ricorda l'infanzia e si chiede perché i suoi genitori non si amassero. Chi sono la coppia nell'immagine e Arthur, e possiamo fidarci di quella voce?"
         },
       ],
       cta: "Vedi tutti i premi",
@@ -267,7 +267,7 @@ const COPY = {
       chiaro_text_dark: "Light.",
       chiaro_text_light: "Shadow.",
       chiaro_sub: "Move the mouse to focus.",
-      cta_submit: "Book a seat in the room",
+      cta_submit: "Submit your film on FilmFreeway",
       cta_book: "Book a seat in the room",
       cta_program: "See the program",
     },
@@ -310,33 +310,33 @@ const COPY = {
       ],
     },
     winners: {
-      eyebrow: "2025 Winners",
+      eyebrow: "2026 Winners",
       title: "The four main awards.",
       lede: "The competition-category awards, selected by a <b>jury</b> of directors, writers, actors and producers. The full palmarès — craft and special awards — is in the archive.",
       items: [
         {
-          award: "Best International", title: "The Steak",
-          director: "Kiarash Dadgar", country: "Canada / Iran", year: "2024",
-          poster: "assets/posters/the-steak.jpg",
-          synopsis: "A birthday party preparation is thrown into chaos by an awful event."
+          award: "Best Italian", title: "Arca",
+          director: "Lorenzo Quagliozzi", country: "Italy", year: "2025",
+          poster: "assets/posters/arca.jpg",
+          synopsis: "During the Cold War, a group of Hollywood directors back from the Second World War safeguard cinema in a secret programme against the end of history. Eighty years later, a climate colony in the mountains of North America welcomes the last keeper of that legacy."
         },
         {
-          award: "Best Italian", title: "Padre",
-          director: "Michele Gallone", country: "Italy", year: "2024",
-          poster: "assets/posters/padre.jpg",
-          synopsis: "In the near future, emotions are for sale. Francesco sold his love for his daughter Anna — a painful choice he made only because her terminal illness left him no alternative. Mario, driven by an ambiguous spirit of sacrifice, pays the highest price a father can feel."
+          award: "Best International", title: "No Matter the Weather",
+          director: "Florence Lafond", country: "Canada", year: "2025",
+          poster: "assets/posters/no-matter-the-weather.webp",
+          synopsis: "Renée, 83, breaks her ankle and is cared for by her granddaughter Florence. Living together brings them even closer, but forces them to face the grandmother's decline."
         },
         {
-          award: "Best Documentary", title: "A Short Sea",
-          director: "Matteo Gamannossi & Riccardo Cocumarolo", country: "Italy", year: "2024",
-          poster: "assets/posters/il-mare-breve.jpg",
-          synopsis: "Since he was young, like his grandfather and father before him, Hans Petur has lived in total isolation as the lighthouse keeper of Akraberg — one of the most remote rocks in Europe, in the Faroe Islands. On his final night of wind and emptiness, he must decide whether retirement is truly a reward, or if what he longs for is nothing more than the adventure of that perfect, timeless solitude."
+          award: "Best Documentary", title: "The Weight of Light",
+          director: "Anna Hints", country: "India", year: "2024",
+          poster: "assets/posters/the-weight-of-light.jpeg",
+          synopsis: "Surya, a young waste picker, is forced by her father into an arranged marriage to secure her a better future. Between fiction and documentary, the film portrays a community of women seeking their place amid waste, heat and forced weddings."
         },
         {
-          award: "Best Animation", title: "Playing God",
-          director: "Matteo Burani", country: "Italy", year: "2024",
-          poster: "assets/posters/playing-god.jpg",
-          synopsis: "A clay sculpture comes to life in the darkness of a laboratory, surrounded by mysterious creatures…"
+          award: "Premio Chiaroscuro", title: "Arthur, 1973",
+          director: "Cesare Barbieri", country: "Italy", year: "2024",
+          poster: "assets/posters/arthur-1973.jpg",
+          synopsis: "Arthur's voice, recorded on an old cassette found in a London cellar, recalls his childhood and wonders why his parents didn't love each other. Who are the couple in the picture, and who is Arthur — can we trust that voice?"
         },
       ],
       cta: "See all the awards",
@@ -500,16 +500,14 @@ const ARCHIVE_2025 = {
   // Full 2025 palmarès — craft & special awards (in addition to the four main
   // competition awards above). recipient = person honoured when applicable.
   awards: [
-    { award_it: "Chiaroscuro Award",                award_en: "Chiaroscuro Award",          title: "The Distance Between Us", director: "Léo Fontaine",                country: "Francia",  recipient: "" },
-    { award_it: "Miglior Fotografia",               award_en: "Best Cinematography",        title: "Dreams Like Paper Boats", director: "Samuel Suffren",              country: "Haiti",    recipient: "" },
-    { award_it: "Miglior Montaggio\n& Sceneggiatura", award_en: "Best Editing & Screenplay", title: "High Tide", director: "Noha Choukrallah", country: "Francia", recipient: "Nicolas Bier · Noha Choukrallah" },
-    { award_it: "Miglior Suono",                    award_en: "Best Sound",                 title: "Voiceless",               director: "Samuel Patthey",              country: "Svizzera", recipient: "Thomas Gassmann" },
-    { award_it: "Miglior Scenografia",              award_en: "Best Production Design",     title: "Il Criaturo Sintetico",   director: "Sarah Narducci",              country: "Italia",   recipient: "Gian Lorenzo Casadio & Vanessa Bondesani" },
-    { award_it: "Miglior Film Sperimentale",        award_en: "Best Experimental",          title: "The Drowned",             director: "Davide Negri & Alessandro Reato", country: "Italia", recipient: "" },
-    { award_it: "Miglior Attrice",                  award_en: "Best Performance",           title: "L'Aînée",                 director: "Alma Jodorowsky",             country: "Francia",  recipient: "Betty Pierucci-Berthoud" },
-    { award_it: "Miglior Attore",                   award_en: "Best Male Performance",      title: "Oro e Contanti",          director: "Luca Buzzi Reschini",         country: "Italia",   recipient: "Andrea Fuorto, Davide Iachini & Federico Mainardi" },
-    { award_it: "Miglior Student Film",         award_en: "Best Student Film",          title: "Die letzte Wette",        director: "Meike Wüstenberg",            country: "Austria",  recipient: "" },
-    { award_it: "Menzione Speciale",                award_en: "Special Mention",            title: "Il fantasma di carta",    director: "Fulvio Davide Ricca",         country: "Italia",   recipient: "" },
+    { award_it: "Miglior Interpretazione",   award_en: "Best Performance",    title: "Aventure FM",            director: "Martin C. Pariseau",   country: "Canada",    recipient: "Philippe David" },
+    { award_it: "Miglior Sceneggiatura",     award_en: "Best Screenplay",     title: "Le rendez-vous",         director: "Salomé du Chatenet",   country: "Francia",   recipient: "" },
+    { award_it: "Miglior Soggetto",          award_en: "Best Story",          title: "A Thing about Kashem",   director: "Bijon Imtiaz",         country: "Bangladesh", recipient: "" },
+    { award_it: "Miglior Fotografia",        award_en: "Best Cinematography", title: "Unavailable",            director: "Kyrylo Zemlyanyi",     country: "Ucraina",   recipient: "" },
+    { award_it: "Miglior Montaggio",         award_en: "Best Editing",        title: "Vagabond",               director: "Philippe Woodtli",     country: "Svizzera",  recipient: "" },
+    { award_it: "Miglior Student Film",      award_en: "Best Student Film",   title: "Un Sole Bellissimo",     director: "Gabriele Manzoni",     country: "Italia",    recipient: "" },
+    { award_it: "Miglior Musica",            award_en: "Best Music",          title: "El pütì pèrs",           director: "Paolo Baiguera",       country: "Italia",    recipient: "Giurassico" },
+    { award_it: "Miglior Animazione",        award_en: "Best Animation",      title: "Layla · Les Vieux",      director: "Registi vari",         country: "Francia",   recipient: "" },
   ],
   fuoriConcorso: [
     { title: "Le Faremo Sapere", director: "Beppe Tufarulo",    note_it: "Fuori concorso · ospite",          note_en: "Out of competition · guest" },

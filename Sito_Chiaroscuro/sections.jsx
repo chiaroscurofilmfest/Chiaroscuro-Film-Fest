@@ -33,7 +33,7 @@ function AtmosphereDivider({ src, videoId, caption, alt, height = "70vh", ratio 
             gap: 24, flexWrap: "wrap",
           }}>
             <span>{caption}</span>
-            <span style={{ color: "var(--fg-faint)" }}>↳ II · 2025</span>
+            <span style={{ color: "var(--fg-faint)" }}>↳ III · 2026</span>
           </figcaption>
         )}
       </figure>
@@ -304,11 +304,11 @@ function AtmosphereGallery({ t, lang }) {
     <section className="shell">
       <SectionHead
         idx="§ 11"
-        eyebrow={lang === "it" ? "Atmosfera 2025" : "Atmosphere 2025"}
+        eyebrow={lang === "it" ? "Atmosfera 2026" : "Atmosphere 2026"}
         title={lang === "it" ? "Attimi di festival." : "Festival moments."}
         rhs={lang === "it"
-          ? "Musica, conversazioni, premi.\nFrammenti dalla seconda edizione."
-          : "Cinema, conversations, awards.\nFragments from the second edition."}
+          ? "Musica, conversazioni, premi.\nFrammenti dalla terza edizione."
+          : "Cinema, conversations, awards.\nFragments from the third edition."}
       />
       <div className="gallery-grid">
         <a className="gallery-cell big" style={{ gridArea: "big" }}>
@@ -320,8 +320,8 @@ function AtmosphereGallery({ t, lang }) {
           <span className="gallery-cap">{lang === "it" ? "Sonorizzazione live · Edmondo Annoni" : "Live scoring · Edmondo Annoni"}</span>
         </a>
         <a className="gallery-cell" style={{ gridArea: "b" }}>
-          <img src={RES("assets/atmosphere/award-experimental.jpg")} alt={lang === "it" ? "Premiazione · Best Experimental" : "Award · Best Experimental"} loading="lazy" />
-          <span className="gallery-cap">{lang === "it" ? "Premiazione · Best Experimental" : "Award · Best Experimental"}</span>
+          <img src={RES("assets/atmosphere/award-best-direction.jpg")} alt={lang === "it" ? "Premiazione · Best Director" : "Award · Best Director"} loading="lazy" />
+          <span className="gallery-cap">{lang === "it" ? "Premiazione · Best Director" : "Award · Best Director"}</span>
         </a>
       </div>
     </section>
@@ -393,7 +393,7 @@ function ProgramSection({ t, lang }) {
         eyebrow={lang === "it" ? "Programma · III Edizione" : "Program · III Edition"}
         title={lang === "it" ? "Tre serate al Conca Verde." : "Three evenings at Conca Verde."}
         lede={lang === "it"
-          ? "Dal <b>28 al 30 settembre 2026</b>: proiezioni in concorso, incontri con autori, professionisti del settore e premiazioni ogni sera."
+          ? "<b>Proiezione</b> dei film in concorso, anteprime, <b>incontri</b> con autori e professionisti del settore, <b>premiazioni</b> ogni sera."
           : "<b>28–30 September 2026</b>: films in competition, talks with filmmakers and industry professionals, and awards every night."}
       />
       <div className="day-tabs" role="tablist" aria-label={lang === "it" ? "Giorni" : "Days"}>
@@ -433,8 +433,8 @@ function AlboOroSection({ t, lang }) {
     <section id="albo" className="shell">
       <SectionHead
         idx="§ 06"
-        eyebrow={lang === "it" ? "Albo d'oro · 2025" : "Roll of honour · 2025"}
-        title={lang === "it" ? "Tutti i premi della II edizione." : "The complete 2025 palmarès."}
+        eyebrow={lang === "it" ? "Albo d'oro · 2026" : "Roll of honour · 2026"}
+        title={lang === "it" ? "Tutti i premi della III edizione." : "The complete 2026 palmarès."}
       />
       <details className="albo-collapse">
         <summary>
@@ -471,7 +471,7 @@ function CTAStrip({ t, lang }) {
           <span style={{ color: "rgba(24,24,24,.55)" }}>{lang === "it" ? "aperte su FilmFreeway." : "open on FilmFreeway."}</span>
         </h2>
         <div className="rhs">
-          <span className="deadline">{lang === "it" ? "Apertura · 1° Ottobre 2026" : "Opening October 1, 2026"}</span>
+          <span className="deadline">{lang === "it" ? "Earlybird Deadline · fino al 31 dicembre" : "Earlybird Deadline · until December 31"}</span>
           <a className="btn btn-dark" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
             {t.submit.cta_strip} <span className="arrow" />
           </a>
