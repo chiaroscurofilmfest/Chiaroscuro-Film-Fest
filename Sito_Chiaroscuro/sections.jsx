@@ -97,6 +97,7 @@ function SubmitSection({ t, lang }) {
               </li>
             ))}
           </ul>
+
         </div>
 
         <div style={{ position: "sticky", top: 110, display: "flex", flexDirection: "column", gap: 18, border: "1px solid var(--line)", padding: 28, background: "rgba(255,255,255,0.04)" }}>
@@ -390,10 +391,10 @@ function ProgramSection({ t, lang }) {
     <section id="programma" className="shell">
       <SectionHead
         idx="§ 03"
-        eyebrow={lang === "it" ? "Programma · III Edizione" : "Program · III Edition"}
+        eyebrow={lang === "it" ? "Programma 2026 · III Edizione" : "2026 Program · III Edition"}
         title={lang === "it" ? "Tre serate al Conca Verde." : "Three evenings at Conca Verde."}
         lede={lang === "it"
-          ? "<b>Proiezione</b> dei film in concorso, anteprime, <b>incontri</b> con autori e professionisti del settore, <b>premiazioni</b> ogni sera."
+          ? "<b>28–30 settembre 2026</b>: <b>proiezioni</b> dei film in concorso, anteprime, <b>incontri</b> con autori e professionisti del settore, <b>premiazioni</b> ogni sera."
           : "<b>28–30 September 2026</b>: films in competition, talks with filmmakers and industry professionals, and awards every night."}
       />
       <div className="day-tabs" role="tablist" aria-label={lang === "it" ? "Giorni" : "Days"}>

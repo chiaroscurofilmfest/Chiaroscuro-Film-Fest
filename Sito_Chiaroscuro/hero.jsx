@@ -9,14 +9,14 @@ const HeroCountdown = ({ t, lang, animO, target }) => {
           <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: "50%", background: "var(--yellow)", marginRight: 10, verticalAlign: 2 }} />
           {t.hero.eyebrow}
         </span>
-        <span className="center">{lang === "it" ? "Quarta Edizione" : "Fourth Edition"} — {lang === "it" ? "Bergamo, Italia" : "Bergamo, Italy"}</span>
+        <span className="center">{lang === "it" ? "IV Edizione · 27–29 settembre 2027 · Cinema Conca Verde, Bergamo" : "IV Edition · September 27–29, 2027 · Cinema Conca Verde, Bergamo"}</span>
         <span className="right">{lang === "it" ? "Iscrizioni 2027 aperte" : "2027 submissions open"} ↗</span>
       </div>
 
       <div className="hero-stage">
         <div className="hero-top-line">
           <div className="hero-title-stack">
-            <span className="eyebrow"><span className="idx">EARLYBIRD DEADLINE</span></span>
+            <span className="eyebrow"><span className="idx">{lang === "it" ? "Scadenza early bird" : "Early bird deadline"}</span></span>
             <h1 className="hero-headline">
               {lang === "it" ? "Iscrivi il tuo film" : "Submit your film"}<br />
               {lang === "it" ? "entro il 31 Dicembre" : "by December 31"}
@@ -50,7 +50,7 @@ const HeroCountdown = ({ t, lang, animO, target }) => {
             {t.hero.cta_submit} <span className="arrow" />
           </a>
           <a className="btn btn-ghost" href="#iscrizioni">
-            {lang === "it" ? "Leggi il bando" : "Read the call"} <span className="arrow" />
+            {lang === "it" ? "Scadenze e categorie" : "Deadlines and categories"} <span className="arrow" />
           </a>
         </div>
       </div>
@@ -180,7 +180,7 @@ const HeroCompact = ({ t, lang, animO, target }) => {
     <section className="hero" data-variant="compact">
       <div className="hero-meta">
         <span><HeroDot />{t.hero.eyebrow}</span>
-        <span className="center">{lang === "it" ? "Quarta Edizione" : "Fourth Edition"} — {lang === "it" ? "Bergamo, Italia" : "Bergamo, Italy"}</span>
+        <span className="center">{lang === "it" ? "IV Edizione · 27–29 settembre 2027 · Cinema Conca Verde, Bergamo" : "IV Edition · September 27–29, 2027 · Cinema Conca Verde, Bergamo"}</span>
         <span className="right">{lang === "it" ? "Iscrizioni 2027 aperte" : "2027 submissions open"} ↗</span>
       </div>
 

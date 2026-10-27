@@ -6,7 +6,7 @@ const COPY = {
     nav: {
       festival: "Festival",
       programma: "Programma",
-      archivio: "Edizione 2025",
+      archivio: "Edizione 2026",
       giuria: "Giuria",
       iscrizioni: "Iscrivi il tuo film",
       partner: "Partner",
@@ -41,33 +41,19 @@ const COPY = {
       eyebrow: "Manifesto",
       title: "Il cinema che non hai ancora visto.",
       lede: "Festival internazionale di cortometraggi a <b>Bergamo</b>. Dal 2024 porta in Italia opere di <b>cinema emergente e indipendente</b> da tutto il mondo — film narrativi, documentari, sperimentali — in dialogo con il pubblico e con l'industria.\n",
-      items: [
-        {
-          n: "\n",
-          h: "\n\n\n",
-          p: "\n\n\n",
-        },
-        {
-          n: "\n",
-          h: "",
-          p: "\n",
-        },
-        {
-          n: "\n",
-          h: "\n",
-          p: "\n",
-        },
-      ],
+      items: [],
     },
     submit: {
       eyebrow: "Iscrizioni 2027",
       title: "Mostra il tuo corto a Bergamo.",
-      lede: "Le iscrizioni alla quarta edizione sono aperte su <b>FilmFreeway</b>. Cerchiamo opere di finzione, documentario e animazione fino a 15 minuti.",
+      lede: "Le iscrizioni alla quarta edizione sono aperte su <b>FilmFreeway</b>. Accettiamo cortometraggi di ogni genere e argomento, fino a 20 minuti titoli di coda compresi.",
       categories: [
         { k: "BEST INTERNATIONAL", v: "Cortometraggi da tutto il mondo" },
         { k: "BEST ITALIAN", v: "La nuova generazione del cinema italiano" },
         { k: "BEST DOCUMENTARY", v: "Sguardi del reale, brevi e urgenti" },
         { k: "BEST ANIMATION", v: "Linguaggi e tecniche d'animazione a confronto" },
+        { k: "BEST STUDENT FILM", v: "I corti degli studenti di cinema" },
+        { k: "PREMIO SPECIALE CHIAROSCURO", v: "Il premio speciale della Giuria" },
       ],
       deadlines: [
         { k: "Apertura", v: "1 Ottobre 2026" },
@@ -172,14 +158,14 @@ const COPY = {
       ],
     },
     incontra: {
-      eyebrow: "Social media",
+      eyebrow: "Format originale",
       title: "Chiaroscuro incontra.",
       lede: "<b>Conversazioni</b> con registi e ospiti durante le serate al Cinema Conca Verde. Film, carriera, linguaggio, visione.",
       past: ["Zingaretti", "Mastandrea", "Sorrentino", "Aureliano Amadei", "Laura Samani", "Naja Phạm Lockwood"],
       cta: "Guarda i reel su Instagram",
     },
     press: {
-      eyebrow: "Press",
+      eyebrow: "Stampa",
       title: "Hanno scritto del festival.",
       items: [
         {
@@ -216,7 +202,7 @@ const COPY = {
       title: "Una rete di cultura, cinema e territorio.",
       items: [
         { name: "Cinema Conca Verde", role: "Sede ufficiale", logo: "assets/partners/conca-verde.png", logoH: "46px" },
-        { name: "Alpha Charlie Production", role: "Powered by", logo: "assets/partners/alpha-charlie.png", logoH: "38px" },
+        { name: "Alpha Charlie Production", role: "Main sponsor", logo: "assets/partners/alpha-charlie.png", logoH: "38px" },
         { name: "Mandelli Arte", role: "Collaborazione artistica", logo: "assets/partners/mandelli-arte.png", logoH: "64px" },
         { name: "Comune di Bergamo", role: "Con il patrocinio di", logo: "assets/partners/comune-bergamo-crest.png", logoH: "118px" },
       ],
@@ -242,7 +228,7 @@ const COPY = {
     nav: {
       festival: "Festival",
       programma: "Program",
-      archivio: "2025 Edition",
+      archivio: "2026 Edition",
       giuria: "Jury",
       iscrizioni: "Submit",
       partner: "Partners",
@@ -275,23 +261,21 @@ const COPY = {
     },
     about: {
       eyebrow: "Manifesto",
-      title: "The short film as necessity.",
+      title: "The cinema you haven't seen yet.",
       lede: "Chiaroscuro is an international short film festival based in Bergamo, Lombardy.\nSince 2024 it has brought independent cinema from around the world to Italy — narrative, documentary, experimental — in dialogue with audiences and the industry.\n",
-      items: [
-        { n: "01", h: "The duality of chiaroscuro", p: "Inspired by Caravaggio: light and shadow as a metaphor for cinema and our times." },
-        { n: "02", h: "Emerging voices", p: "We focus on young, independent, international authors — with an honest gaze on reality." },
-        { n: "03", h: "Community & territory", p: "Independent by choice. No commercial pressure, no compromise on selection." },
-      ],
+      items: [],
     },
     submit: {
       eyebrow: "Submissions 2027",
       title: "Bring your short film to Bergamo.",
-      lede: "Submissions for the fourth edition are now open on <b>FilmFreeway</b>. We accept fiction, documentary and animation up to 15 minutes.",
+      lede: "Submissions for the fourth edition are now open on <b>FilmFreeway</b>. We accept short films of any genre and subject, up to 20 minutes including credits.",
       categories: [
         { k: "BEST INTERNATIONAL", v: "Shorts from across the world" },
         { k: "BEST ITALIAN", v: "Italy's next generation" },
         { k: "BEST DOCUMENTARY", v: "Brief, radical glimpses of the real" },
         { k: "BEST ANIMATION", v: "Languages and techniques of animation" },
+        { k: "BEST STUDENT FILM", v: "Shorts by film students" },
+        { k: "CHIAROSCURO SPECIAL AWARD", v: "The Jury's special award" },
       ],
       deadlines: [
         { k: "Opening", v: "October 1, 2026" },
@@ -440,7 +424,7 @@ const COPY = {
       title: "A network of culture, cinema, territory.",
       items: [
         { name: "Cinema Conca Verde",       role: "Official venue", logo: "assets/partners/conca-verde.png", logoH: "46px" },
-        { name: "Alpha Charlie Production", role: "Powered by", logo: "assets/partners/alpha-charlie.png", logoH: "38px" },
+        { name: "Alpha Charlie Production", role: "Main sponsor", logo: "assets/partners/alpha-charlie.png", logoH: "38px" },
         { name: "Mandelli Arte",            role: "Artistic collaboration", logo: "assets/partners/mandelli-arte.png", logoH: "64px" },
         { name: "Comune di Bergamo",        role: "Under the patronage of", logo: "assets/partners/comune-bergamo-crest.png", logoH: "118px" },
       ],
@@ -488,7 +472,7 @@ const PROGRAM = {
 
     // Day 3 — Mercoledì 30 Settembre
     { day: "d3", time: "20:30", cat: "screening", name_it: "Primo blocco · concorso", name_en: "First block · competition", meta_it: "Aventure FM (Canada) · Les rendez-vous (Francia) · Les Vieux (Francia) · Arthur, 1973 (Italia) · No Matter the Weather (Canada) · 20:30–22:00", meta_en: "Aventure FM (Canada) · Les rendez-vous (France) · Les Vieux (France) · Arthur, 1973 (Italy) · No Matter the Weather (Canada) · 8:30–10:00 PM" },
-    { day: "d3", time: "22:00", cat: "talk",      name_it: "Secondo blocco · Arca e incontro con Andrea Brusa", name_en: "Second block · Arca and a talk with Andrea Brusa", meta_it: "Arca (Italia) in concorso, con il regista Andrea Brusa · 22:00–23:00", meta_en: "Arca (Italy) in competition, with director Andrea Brusa · 10:00–11:00 PM" },
+    { day: "d3", time: "22:00", cat: "talk",      name_it: "Secondo blocco · Arca e incontro con Andrea Brusa", name_en: "Second block · Arca and a talk with Andrea Brusa", meta_it: "Arca (Italia) in concorso e incontro con il regista Andrea Brusa · 22:00–23:00", meta_en: "Arca (Italy) in competition and a talk with director Andrea Brusa · 10:00–11:00 PM" },
     { day: "d3", time: "23:00", cat: "award",     name_it: "Premiazione finale", name_en: "Final awards", meta_it: "Chiusura della terza edizione", meta_en: "Closing of the third edition" },
   ],
 };

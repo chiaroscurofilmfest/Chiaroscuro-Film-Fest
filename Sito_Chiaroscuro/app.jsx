@@ -13,7 +13,11 @@ const TWEAK_DEFAULTS = {
 };
 
 function App() {
-  const [t, setT] = React.useState(TWEAK_DEFAULTS);
+  // Lingua iniziale dal browser: italiano per chi ha il browser in italiano, inglese per tutti gli altri
+  const [t, setT] = React.useState(() => ({
+    ...TWEAK_DEFAULTS,
+    lang: (navigator.language || "it").toLowerCase().startsWith("it") ? "it" : "en",
+  }));
   const setTweak = (k, v) => setT((prev) => ({ ...prev, [k]: v }));
   const lang = t.lang === "en" ? "en" : "it";
   const setLang = (l) => setTweak("lang", l);
