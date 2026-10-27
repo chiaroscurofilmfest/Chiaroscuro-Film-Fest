@@ -236,7 +236,7 @@ function GuestsSection({ t, lang }) {
   return (
     <section className="shell">
       <SectionHead idx="§ 08" eyebrow={t.guests.eyebrow} title={t.guests.title} />
-      <div className="people">
+      <div className="people people--compact">
         {t.guests.items.map((p, i) => (
           <div className="person" key={i}>
             <div className="portrait-wrap">

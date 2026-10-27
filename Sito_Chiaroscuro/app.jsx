@@ -47,24 +47,25 @@ function App() {
       />
 
       <AboutSection      t={copy} lang={lang} />
-      <AtmosphereDivider
-        videoId="VPemJXzBDMg"
-        caption={lang === "it" ? "Video report · Edizione III 2026" : "Video report · III Edition 2026"}
-        alt="Chiaroscuro Film Fest 2026 — video report"
-      />
       <SubmitSection     t={copy} lang={lang} />
-      <ProgramSection    t={copy} lang={lang} />
-      <StatsSection      t={copy} lang={lang} />
       <WinnersSection    t={copy} lang={lang} />
       <AlboOroSection    t={copy} lang={lang} />
       <JurySection       t={copy} lang={lang} />
       <GuestsSection     t={copy} lang={lang} />
       <IncontraSection   t={copy} lang={lang} />
       <PressSection      t={copy} lang={lang} />
+
+      {/* Capitolo III Edizione: video, numeri, programma, galleria */}
+      <AtmosphereDivider
+        videoId="VPemJXzBDMg"
+        caption={lang === "it" ? "Video report · Edizione III 2026" : "Video report · III Edition 2026"}
+        alt="Chiaroscuro Film Fest 2026 — video report"
+      />
+      <StatsSection      t={copy} lang={lang} />
+      <ProgramSection    t={copy} lang={lang} />
       <AtmosphereGallery t={copy} lang={lang} />
+
       <PartnersSection   t={copy} lang={lang} />
-      <CTAStrip          t={copy} lang={lang} />
-      <ContactSection    t={copy} lang={lang} />
 
       <Footer t={copy} lang={lang} />
     </React.Fragment>

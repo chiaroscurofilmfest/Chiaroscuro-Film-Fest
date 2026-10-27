@@ -80,9 +80,8 @@ function SectionHead({ eyebrow, title, lede, idx, rhs }) {
   return (
     <div className="section-head">
       <div className="lhs">
-        {(idx || eyebrow) && (
+        {eyebrow && (
           <div className="eyebrow">
-            {idx && <span className="idx" style={{ marginRight: 14 }}>{idx}</span>}
             {eyebrow && (<><span className="dot" />{eyebrow}</>)}
           </div>
         )}
@@ -198,9 +197,9 @@ function Nav({ t, lang, setLang, onOpenTweaks, theme }) {
       </a>
       <nav className="nav-links">
         <a href="#festival">{t.nav.festival}</a>
-        <a href="#programma">{t.nav.programma}</a>
         <a href="#edizione">{t.nav.archivio}</a>
         <a href="#giuria">{t.nav.giuria}</a>
+        <a href="#programma">{t.nav.programma}</a>
         <a href="#partner">{t.nav.partner}</a>
         <a href="#contatti">{t.nav.contatti}</a>
       </nav>
@@ -227,9 +226,9 @@ function Nav({ t, lang, setLang, onOpenTweaks, theme }) {
       <div id="nav-mobile-menu" className={"nav-mobile" + (menuOpen ? " open" : "")} hidden={!menuOpen}>
         <nav className="nav-mobile-links">
           <a href="#festival" onClick={closeMenu}>{t.nav.festival}</a>
-          <a href="#programma" onClick={closeMenu}>{t.nav.programma}</a>
           <a href="#edizione" onClick={closeMenu}>{t.nav.archivio}</a>
           <a href="#giuria" onClick={closeMenu}>{t.nav.giuria}</a>
+          <a href="#programma" onClick={closeMenu}>{t.nav.programma}</a>
           <a href="#partner" onClick={closeMenu}>{t.nav.partner}</a>
           <a href="#contatti" onClick={closeMenu}>{t.nav.contatti}</a>
         </nav>
@@ -257,9 +256,9 @@ function Footer({ t, lang }) {
         <div>
           <h4>{lang === "it" ? "Naviga" : "Navigate"}</h4>
           <a href="#festival">{t.nav.festival}</a>
-          <a href="#programma">{t.nav.programma}</a>
           <a href="#edizione">{t.nav.archivio}</a>
           <a href="#giuria">{t.nav.giuria}</a>
+          <a href="#programma">{t.nav.programma}</a>
           <a href="#partner">{t.nav.partner}</a>
         </div>
         <div>
@@ -269,9 +268,9 @@ function Footer({ t, lang }) {
           <a href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">FilmFreeway →</a>
         </div>
         <div>
-          <h4>{lang === "it" ? "Stampa" : "Press"}</h4>
-          <p style={{ color: "rgba(255,255,255,.7)" }}>{t.contact.director.name}<br/>{t.contact.director.role}<br/>{t.contact.director.phone}</p>
-          <p style={{ marginTop: 10, color: "rgba(255,255,255,.7)" }}>{t.contact.producer.name}<br/>{t.contact.producer.role}<br/>{t.contact.producer.phone}</p>
+          <h4>{lang === "it" ? "Organizzazione" : "Team"}</h4>
+          <p style={{ color: "rgba(255,255,255,.7)" }}>{t.contact.director.name}<br/>{t.contact.director.role}<br/><a href={`tel:${t.contact.director.phone.replace(/\s/g, "")}`} style={{ display: "inline" }}>{t.contact.director.phone}</a></p>
+          <p style={{ marginTop: 10, color: "rgba(255,255,255,.7)" }}>{t.contact.producer.name}<br/>{t.contact.producer.role}<br/><a href={`tel:${t.contact.producer.phone.replace(/\s/g, "")}`} style={{ display: "inline" }}>{t.contact.producer.phone}</a></p>
         </div>
       </div>
 

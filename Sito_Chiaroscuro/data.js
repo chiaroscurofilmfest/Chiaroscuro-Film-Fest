@@ -148,13 +148,16 @@ const COPY = {
       ],
     },
     guests: {
-      eyebrow: "Ospiti 2025",
+      eyebrow: "Ospiti",
       title: "Le voci che hanno attraversato il festival.",
       items: [
-        { name: "Naja Phạm Lockwood", role: "Regista USA · Sundance 2025",                    portrait: "assets/guests/naja.jpg"      },
-        { name: "Giuseppe Carrieri",   role: "Regista · candidato David di Donatello",    portrait: "assets/guests/carrieri.jpg"  },
-        { name: "Beppe Tufarulo",      role: "Regista · Sky Arte, Amazon Prime",                portrait: "assets/guests/tufarulo.jpg"  },
-        { name: "Elettra Canovi",     role: "Director of Local Original Productions · HBO Max Italia", portrait: "assets/guests/canovi.jpg" },
+        { name: "Alessio Boni",        role: "Attore · Lo sguardo dell'altro",                  year: "2026", portrait: "assets/guests/boni.jpg" },
+        { name: "Andrea Brusa",        role: "Regista e sceneggiatore · Balcanica",             year: "2026", portrait: "assets/guests/brusa.jpg" },
+        { name: "Willow",              role: "Artista neopop",                                  year: "2026", portrait: "assets/guests/willow.jpg" },
+        { name: "Naja Phạm Lockwood", role: "Regista USA · Sundance 2025",                     year: "2025", portrait: "assets/guests/naja.jpg"      },
+        { name: "Giuseppe Carrieri",   role: "Regista · candidato David di Donatello",          year: "2025", portrait: "assets/guests/carrieri.jpg"  },
+        { name: "Beppe Tufarulo",      role: "Regista · Sky Arte, Amazon Prime",                year: "2025", portrait: "assets/guests/tufarulo.jpg"  },
+        { name: "Elettra Canovi",      role: "Director of Local Original Productions · HBO Max Italia", year: "2025", portrait: "assets/guests/canovi.jpg" },
       ],
     },
     incontra: {
@@ -370,13 +373,16 @@ const COPY = {
       ],
     },
     guests: {
-      eyebrow: "2025 Guests",
+      eyebrow: "Guests",
       title: "The voices that crossed the festival.",
       items: [
-        { name: "Naja Phạm Lockwood", role: "US Director · Sundance 2025",                       portrait: "assets/guests/naja.jpg"      },
-        { name: "Giuseppe Carrieri",  role: "Director, IULM · David di Donatello nominee",         portrait: "assets/guests/carrieri.jpg"  },
-        { name: "Beppe Tufarulo",     role: "Director · Sky Arte, Amazon Prime",                   portrait: "assets/guests/tufarulo.jpg"  },
-        { name: "Elettra Canovi",    role: "Director of Local Original Productions · HBO Max Italy", portrait: "assets/guests/canovi.jpg" },
+        { name: "Alessio Boni",       role: "Actor · Lo sguardo dell'altro",                      year: "2026", portrait: "assets/guests/boni.jpg" },
+        { name: "Andrea Brusa",       role: "Director and screenwriter · Balcanica",              year: "2026", portrait: "assets/guests/brusa.jpg" },
+        { name: "Willow",             role: "Neo-pop artist",                                     year: "2026", portrait: "assets/guests/willow.jpg" },
+        { name: "Naja Phạm Lockwood", role: "US Director · Sundance 2025",                        year: "2025", portrait: "assets/guests/naja.jpg"      },
+        { name: "Giuseppe Carrieri",  role: "Director, IULM · David di Donatello nominee",        year: "2025", portrait: "assets/guests/carrieri.jpg"  },
+        { name: "Beppe Tufarulo",     role: "Director · Sky Arte, Amazon Prime",                  year: "2025", portrait: "assets/guests/tufarulo.jpg"  },
+        { name: "Elettra Canovi",     role: "Director of Local Original Productions · HBO Max Italy", year: "2025", portrait: "assets/guests/canovi.jpg" },
       ],
     },
     incontra: {
