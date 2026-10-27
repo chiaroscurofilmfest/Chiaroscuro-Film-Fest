@@ -10,7 +10,7 @@ function AtmosphereDivider({ src, videoId, caption, alt, height = "70vh", ratio 
         <div style={{ position: "relative", overflow: "hidden", aspectRatio: videoId ? ratio : undefined, height: videoId ? "auto" : height, maxHeight: 900, background: "#0a0a0a" }}>
           {videoId ? (
             <iframe
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3`}
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=1&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3`}
               title={alt || "Chiaroscuro Film Fest"}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -399,12 +399,12 @@ function ProgramSection({ t, lang }) {
       />
       <div className="day-tabs" role="tablist" aria-label={lang === "it" ? "Giorni" : "Days"}>
         {window.PROGRAM.days.map((d) => (
-          <button key={d.id} className={day === d.id ? "on" : ""} onClick={() => setDay(d.id)}>{d.label[lang]}</button>
+          <button key={d.id} role="tab" aria-selected={day === d.id} className={day === d.id ? "on" : ""} onClick={() => setDay(d.id)}>{d.label[lang]}</button>
         ))}
       </div>
       <div className="cat-tabs" role="tablist" aria-label={lang === "it" ? "Categorie" : "Categories"}>
         {allCats.map((c) => (
-          <button key={c} className={cat === c ? "on" : ""} onClick={() => setCat(c)}>{cats[c]}</button>
+          <button key={c} role="tab" aria-selected={cat === c} className={cat === c ? "on" : ""} onClick={() => setCat(c)}>{cats[c]}</button>
         ))}
       </div>
       <div className="kicker" style={{ paddingBottom: 12 }}>{dayObj.full[lang]}</div>

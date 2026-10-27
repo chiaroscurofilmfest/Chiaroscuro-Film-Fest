@@ -1,7 +1,16 @@
 // hero.jsx — Hero section with 3 variants for Chiaroscuro Film Fest
 
-const HeroCountdown = ({ t, lang, animO, target }) => {
-  const { D, H, M, S } = useCountdown(target);
+// Scadenze FilmFreeway: il countdown passa da sola alla scadenza successiva
+const SUBMIT_DEADLINES = [
+  { iso: "2026-12-31T23:59:59+01:00", it: "entro il 31 Dicembre", en: "by December 31" },
+  { iso: "2027-03-31T23:59:59+02:00", it: "entro il 31 Marzo",    en: "by March 31" },
+  { iso: "2027-06-30T23:59:59+02:00", it: "entro il 30 Giugno",   en: "by June 30" },
+  { iso: "2027-07-31T23:59:59+02:00", it: "entro il 31 Luglio",   en: "by July 31" },
+];
+
+const HeroCountdown = ({ t, lang, animO }) => {
+  const next = SUBMIT_DEADLINES.find((d) => new Date(d.iso).getTime() > Date.now());
+  const { D, H, M, S } = useCountdown(next ? next.iso : SUBMIT_DEADLINES[SUBMIT_DEADLINES.length - 1].iso);
   return (
     <section className="hero hero--photo dark-sect" data-variant="countdown">
       {/* La sala al buio: lo schermo è l'unica fonte di luce, il testo sta nell'ombra del pubblico */}
@@ -27,13 +36,15 @@ const HeroCountdown = ({ t, lang, animO, target }) => {
         <div className="hero-top-line">
           <div className="hero-title-stack">
             <h1 className="hero-headline">
-              {lang === "it" ? "Iscrivi il tuo film" : "Submit your film"}<br />
-              {lang === "it" ? "entro il 31 Dicembre" : "by December 31"}
+              {next ? <>
+                {lang === "it" ? "Iscrivi il tuo film" : "Submit your film"}<br />
+                {next[lang]}
+              </> : (lang === "it" ? "27–29 settembre 2027" : "September 27–29, 2027")}
             </h1>
           </div>
         </div>
 
-        <div>
+        {next && <div>
           <div className="cd-grid">
             <div className="cd-cell">
               <span className="num">{pad(D, 3)}</span>
@@ -52,12 +63,12 @@ const HeroCountdown = ({ t, lang, animO, target }) => {
               <span className="label">{lang === "it" ? "Secondi" : "Seconds"}</span>
             </div>
           </div>
-        </div>
+        </div>}
 
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 8 }}>
-          <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
+          {next && <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener">
             {t.hero.cta_submit} <span className="arrow" />
-          </a>
+          </a>}
           <a className="btn btn-ghost" href="#iscrizioni">
             {lang === "it" ? "Scadenze e categorie" : "Deadlines and categories"} <span className="arrow" />
           </a>

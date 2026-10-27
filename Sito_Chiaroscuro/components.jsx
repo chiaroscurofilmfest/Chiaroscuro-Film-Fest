@@ -205,9 +205,9 @@ function Nav({ t, lang, setLang, onOpenTweaks, theme }) {
           {t.nav.iscrizioni}
           <span className="arrow" />
         </a>
-        <div className="lang-toggle" role="tablist" aria-label="Language">
-          <button className={lang === "it" ? "on" : ""} onClick={() => setLang("it")}>IT</button>
-          <button className={lang === "en" ? "on" : ""} onClick={() => setLang("en")}>EN</button>
+        <div className="lang-toggle" role="group" aria-label="Lingua / Language">
+          <button className={lang === "it" ? "on" : ""} aria-pressed={lang === "it"} lang="it" onClick={() => setLang("it")}>IT</button>
+          <button className={lang === "en" ? "on" : ""} aria-pressed={lang === "en"} lang="en" onClick={() => setLang("en")}>EN</button>
         </div>
         <button
           className={"nav-burger" + (menuOpen ? " open" : "")}

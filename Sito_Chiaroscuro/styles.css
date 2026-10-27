@@ -1319,3 +1319,18 @@ footer.foot {
 .foot-bottom { text-transform: none; letter-spacing: 0.02em; }
 .slot .body .meta { font-family: var(--f-sans); font-size: 14px; letter-spacing: 0; text-transform: none; }
 .albo-summary-count { color: var(--ink); }
+
+
+/* ========== Mobile e accessibilità ========== */
+.lang-toggle button { min-height: 32px; min-width: 36px; }
+@media (max-width: 560px) {
+  /* programma: l'orario va sopra il titolo invece di rubare una colonna */
+  .slot { grid-template-columns: 1fr auto; gap: 6px 16px; }
+  .slot .time { grid-column: 1 / -1; }
+  /* vincitori: due locandine per riga invece di una */
+  .winners-grid { grid-template-columns: 1fr 1fr; gap: 24px 14px; }
+  .winner { gap: 10px; }
+  .winner-title { font-size: 20px; }
+  .winner-badge { top: 8px; left: 8px; padding: 5px 7px; font-size: 11px; letter-spacing: 0.04em; }
+  .lang-toggle button { min-height: 40px; min-width: 40px; }
+}

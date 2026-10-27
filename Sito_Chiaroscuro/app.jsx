@@ -1,7 +1,5 @@
 // app.jsx — main composer for Chiaroscuro home page
 
-const TARGET_2026 = "2026-12-31T23:59:59+01:00"; // Earlybird deadline — submissions 2027
-
 const TWEAK_DEFAULTS = {
   "lang": "it",
   "theme": "light",
@@ -43,7 +41,6 @@ function App() {
         t={copy}
         lang={lang}
         animO={!!t.animO}
-        target={TARGET_2026}
       />
 
       <AboutSection      t={copy} lang={lang} />
