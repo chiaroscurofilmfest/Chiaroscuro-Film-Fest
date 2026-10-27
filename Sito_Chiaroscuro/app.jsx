@@ -42,22 +42,18 @@ function App() {
         animO={!!t.animO}
       />
 
+      {/* Manifesto + video dell'edizione 2026 in un solo blocco */}
       <AboutSection      t={copy} lang={lang} />
       <SubmitSection     t={copy} lang={lang} />
+      <StatsSection      t={copy} lang={lang} />
+      {/* Vincitori con il palmarès completo apribile sotto le locandine */}
       <WinnersSection    t={copy} lang={lang} />
-      <AlboOroSection    t={copy} lang={lang} />
       <JurySection       t={copy} lang={lang} />
       <GuestsSection     t={copy} lang={lang} />
       <IncontraSection   t={copy} lang={lang} />
       <PressSection      t={copy} lang={lang} />
 
-      {/* Capitolo III Edizione: video, numeri, programma, galleria */}
-      <AtmosphereDivider
-        videoId="VPemJXzBDMg"
-        caption={lang === "it" ? "Video report · Edizione III 2026" : "Video report · III Edition 2026"}
-        alt="Chiaroscuro Film Fest 2026 — video report"
-      />
-      <StatsSection      t={copy} lang={lang} />
+      {/* Capitolo III Edizione: programma e galleria */}
       <ProgramSection    t={copy} lang={lang} />
       <AtmosphereGallery t={copy} lang={lang} />
 

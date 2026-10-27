@@ -3,9 +3,9 @@
 const { useState, useMemo } = React;
 
 // ─── Full-bleed atmosphere divider (image or YouTube video) ────────────────
-function AtmosphereDivider({ src, videoId, caption, alt, height = "70vh", ratio = "16/9" }) {
+function AtmosphereDivider({ src, videoId, caption, alt, height = "70vh", ratio = "16/9", embedded = false }) {
   return (
-    <section className="atmosphere" style={{ padding: 0, borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
+    <section className="atmosphere" style={embedded ? { padding: 0 } : { padding: 0, borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
       <figure style={{ margin: 0, position: "relative" }}>
         <div style={{ position: "relative", overflow: "hidden", aspectRatio: videoId ? ratio : undefined, height: videoId ? "auto" : height, maxHeight: 900, background: "#0a0a0a" }}>
           {videoId ? (
@@ -51,6 +51,14 @@ function AboutSection({ t, lang }) {
         title={t.about.title}
         lede={t.about.lede}
       />
+      <div className="about-video">
+        <AtmosphereDivider
+          embedded
+          videoId="VPemJXzBDMg"
+          caption={lang === "it" ? "Video report · Edizione III 2026" : "Video report · III Edition 2026"}
+          alt="Chiaroscuro Film Fest 2026 — video report"
+        />
+      </div>
       {(() => {
         // Only render items that actually carry content — skip blank
         // placeholders so we don't leave empty hairlines on the page.
@@ -177,6 +185,7 @@ function WinnersSection({ t, lang }) {
             </article>
           ))}
         </div>
+        <AlboOroSection t={t} lang={lang} />
       </div>
     </section>
   );
@@ -184,46 +193,21 @@ function WinnersSection({ t, lang }) {
 
 // ─── Jury (presidente lead + cards with real portraits + bios) ────────────
 function JurySection({ t, lang }) {
-  const president = t.jury.items[0];
-  const rest = t.jury.items.slice(1);
   return (
     <section id="giuria" className="shell">
       <SectionHead idx="§ 07" eyebrow={t.jury.eyebrow} title={t.jury.title} />
-
-      {/* Lead: Presidente */}
-      <article className="jury-lead">
-        <div className="jury-lead-portrait">
-          {president.portrait
-            ? <img src={RES(president.portrait)} alt={president.name} loading="lazy" />
-            : <Placeholder ratio="4/5" label={president.name} />
-          }
-          <div className="jury-lead-tag">
-            <span className="award-mark">★</span> {lang === "it" ? "Presidente di Giuria" : "Jury President"}
-          </div>
-        </div>
-        <div className="jury-lead-text">
-          <div className="kicker" style={{ marginBottom: 14 }}>{lang === "it" ? "Edizione III · 2026" : "III Edition · 2026"}</div>
-          <h3 className="h-2" style={{ marginBottom: 10 }}>{president.name}</h3>
-          <div className="role" style={{ marginBottom: 24, fontFamily: "var(--f-mono)", fontSize: 12, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--fg-dim)" }}>{president.role}</div>
-          {president.bio && <p className="lede" style={{ color: "var(--fg)", maxWidth: "52ch" }} dangerouslySetInnerHTML={{ __html: president.bio }} />}
-        </div>
-      </article>
-
-      {/* Other jurors */}
-      <div className="jury-rest">
-        {rest.map((p, i) => (
-          <article className="juror" key={i}>
-            <div className="juror-portrait">
+      <div className="people jury-row">
+        {t.jury.items.map((p, i) => (
+          <article className="person" key={i}>
+            <div className="portrait-wrap">
               {p.portrait
-                ? <img src={RES(p.portrait)} alt={p.name} loading="lazy" />
-                : <Placeholder ratio="4/5" label={p.name} />
-              }
+                ? <img className="portrait-img" src={RES(p.portrait)} alt={p.name} loading="lazy" />
+                : <Placeholder ratio="1/1" label={p.name} />}
+              {i === 0 && <div className="winner-badge"><span className="award-mark">★</span> {lang === "it" ? <>Presidente<span className="hide-sm"> di Giuria</span></> : <>Jury President</>}</div>}
             </div>
-            <div className="juror-meta">
-              <h4 className="juror-name">{p.name}</h4>
-              <div className="juror-role">{p.role}</div>
-              {p.bio && <p className="juror-bio" dangerouslySetInnerHTML={{ __html: p.bio }} />}
-            </div>
+            <div className="name">{p.name}</div>
+            <div className="role">{p.role.replace(/^Presidente di Giuria · |^Jury President · /, "")}</div>
+            {p.bio && <p className="juror-bio" dangerouslySetInnerHTML={{ __html: p.bio }} />}
           </article>
         ))}
       </div>
@@ -431,12 +415,8 @@ function ProgramSection({ t, lang }) {
 // ─── Albo d'oro 2025 (full palmarès) ─────────────────────────────────────────
 function AlboOroSection({ t, lang }) {
   return (
-    <section id="albo" className="shell">
-      <SectionHead
-        idx="§ 06"
-        eyebrow={lang === "it" ? "Albo d'oro · 2026" : "Roll of honour · 2026"}
-        title={lang === "it" ? "Tutti i premi della III edizione." : "The complete 2026 palmarès."}
-      />
+    <div id="albo" className="albo-embedded">
+      <h3 className="albo-title">{lang === "it" ? "Tutti i premi della III edizione" : "The complete 2026 palmarès"}</h3>
       <details className="albo-collapse">
         <summary>
           <span className="albo-summary-label" data-open={lang === "it" ? "Riduci l'albo completo" : "Hide the full palmarès"} data-closed={lang === "it" ? "Espandi l'albo completo" : "Show the full palmarès"} />
@@ -459,7 +439,7 @@ function AlboOroSection({ t, lang }) {
           ))}
         </div>
       </details>
-    </section>
+    </div>
   );
 }
 
