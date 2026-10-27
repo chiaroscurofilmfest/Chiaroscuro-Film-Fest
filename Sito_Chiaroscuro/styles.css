@@ -1383,3 +1383,5 @@ a.right { color: inherit; }
 .jury-row .juror-bio b { font-weight: 500; color: var(--fg); }
 @media (max-width: 560px) { .hide-sm { display: none; } }
 .jury-row .juror-bio { text-wrap: pretty; }
+/* palmarès dentro la sezione scura: hover scuro, non crema */
+.dark-sect .slot:hover { background: rgba(250,249,246,.05); }
