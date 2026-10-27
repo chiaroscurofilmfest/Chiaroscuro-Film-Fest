@@ -303,7 +303,7 @@ const COPY = {
     winners: {
       eyebrow: "2026 Winners",
       title: "The four main awards.",
-      lede: "The competition-category awards, selected by a <b>jury</b> of directors, writers, actors and producers. The full palmarès — craft and special awards — is in the archive.",
+      lede: "The awards of the competition categories, chosen by a <b>jury</b> of directors, screenwriters, actors and producers.",
       items: [
         {
           award: "Best Italian", title: "Arca",
@@ -334,7 +334,7 @@ const COPY = {
     },
     jury: {
       eyebrow: "2026 Jury",
-      title: "International, intimate, demanding.",
+      title: "An exceptional jury.",
       items: [
         {
           name: "Alessio Boni",
@@ -447,8 +447,8 @@ const COPY = {
       filmfreeway: "filmfreeway.com/chiaroscurofilmfest",
     },
     footer: {
-      tagline: "Short film, independent, Bergamo.",
-      colophon: "© 2026 Chiaroscuro Film Fest — All rights reserved.",
+      tagline: "Short, emerging cinema in Bergamo.",
+      colophon: "© 2026 Chiaroscuro Film Fest — a project of Chiaroscuro ETS, tax code 95269850160 — all rights reserved.",
       legal: ["Privacy", "Cookies", "Transparency"],
     },
   },

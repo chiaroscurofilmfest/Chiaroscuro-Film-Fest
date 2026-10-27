@@ -27,7 +27,7 @@ function AtmosphereDivider({ src, videoId, caption, alt, height = "70vh", ratio 
           <figcaption style={{
             padding: "16px var(--gutter)",
             display: "flex", justifyContent: "space-between", alignItems: "baseline",
-            fontFamily: "var(--f-mono)", fontSize: 11, letterSpacing: "0.08em",
+            fontFamily: "var(--f-mono)", fontSize: 12, letterSpacing: "0.08em",
             textTransform: "uppercase", color: "var(--fg-dim)",
             background: "var(--bg)",
             gap: 24, flexWrap: "wrap",
@@ -149,7 +149,7 @@ function WinnersSection({ t, lang }) {
         <div className="winners-grid">
           {t.winners.items.map((f, i) => (
             <article className="winner" key={i}>
-              <div className="winner-poster">
+              <div className="winner-poster" tabIndex={0}>
                 {f.poster
                   ? <img src={RES(f.poster)} alt={`${f.title} — locandina`} loading="lazy" />
                   : <Placeholder ratio="2/3" label={f.title} />
@@ -260,7 +260,7 @@ function IncontraSection({ t, lang }) {
       <div className="shell">
         <SectionHead idx="§ 09" eyebrow={t.incontra.eyebrow} title={t.incontra.title} lede={t.incontra.lede} />
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginBottom: 32 }}>
+        <div className="reels" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginBottom: 32 }}>
           {[
             { src: "assets/atmosphere/reel-sorrentino.jpg", label: "Paolo Sorrentino",   href: "https://www.instagram.com/reel/DTxMR2MjHp_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
             { src: "assets/atmosphere/reel-mastandrea.jpg", label: "Valerio Mastandrea", href: "https://www.instagram.com/reel/DHynZI8Ndkc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
@@ -276,7 +276,7 @@ function IncontraSection({ t, lang }) {
                 <span style={{ width: 36, height: 36, borderRadius: "50%", background: "rgba(255,255,255,.16)", backdropFilter: "blur(8px)", display: "inline-flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,255,255,.3)" }}>
                   <span style={{ width: 0, height: 0, borderLeft: "9px solid var(--paper)", borderTop: "6px solid transparent", borderBottom: "6px solid transparent", marginLeft: 2 }} />
                 </span>
-                <span style={{ fontFamily: "var(--f-mono)", fontSize: 11, letterSpacing: "0.08em", textTransform: "uppercase" }}>{r.label}</span>
+                <span style={{ fontSize: 14, fontWeight: 600 }}>{r.label}</span>
               </div>
               <span style={{ position: "absolute", top: 14, right: 14, fontFamily: "var(--f-mono)", fontSize: 12, padding: "4px 8px", background: "rgba(0,0,0,.5)", color: "var(--paper)", letterSpacing: "0.08em", textTransform: "uppercase", backdropFilter: "blur(4px)" }}>Reel</span>
             </a>
@@ -309,7 +309,7 @@ function AtmosphereGallery({ t, lang }) {
         title={lang === "it" ? "Attimi di festival." : "Festival moments."}
         rhs={lang === "it"
           ? "Musica, conversazioni, premi.\nFrammenti dalla terza edizione."
-          : "Cinema, conversations, awards.\nFragments from the third edition."}
+          : "Music, conversations, awards.\nFragments from the third edition."}
       />
       <div className="gallery-grid">
         <a className="gallery-cell big" style={{ gridArea: "big" }}>
@@ -344,7 +344,7 @@ function PressSection({ t, lang }) {
             <div className="headline">{p.headline}</div>
             <div className="blurb">{p.blurb}</div>
             <div style={{ marginTop: 8 }}>
-              <span className="link-arrow muted">{lang === "it" ? "Leggi" : "Read"} <span className="arrow" /></span>
+              {p.url && <span className="link-arrow muted">{lang === "it" ? "Leggi" : "Read"} <span className="arrow" /></span>}
             </div>
           </a>
         ))}
@@ -368,7 +368,7 @@ function PartnersSection({ t, lang }) {
         ))}
       </div>
       <div style={{ marginTop: 28, display: "flex", justifyContent: "flex-end" }}>
-        <a className="link-arrow" href={`mailto:chiaroscurofilmfest@gmail.com?subject=Partner%202026`}>
+        <a className="link-arrow" href={`mailto:chiaroscurofilmfest@gmail.com?subject=Partner%202027`}>
           {t.partners.become} <span className="arrow" />
         </a>
       </div>

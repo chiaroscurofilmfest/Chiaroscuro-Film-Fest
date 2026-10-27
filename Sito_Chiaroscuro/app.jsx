@@ -37,7 +37,6 @@ function App() {
       <Nav t={copy} lang={lang} setLang={setLang} theme={t.theme} />
 
       <Hero
-        variant={t.heroVariant}
         t={copy}
         lang={lang}
         animO={!!t.animO}
@@ -65,6 +64,7 @@ function App() {
       <PartnersSection   t={copy} lang={lang} />
 
       <Footer t={copy} lang={lang} />
+      <MobileSubmitBar t={copy} lang={lang} />
     </React.Fragment>
   );
 }
