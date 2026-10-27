@@ -261,9 +261,9 @@ function IncontraSection({ t, lang }) {
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginBottom: 32 }}>
           {[
-            { src: "assets/atmosphere/reel-sorrentino.png", label: "Paolo Sorrentino",   href: "https://www.instagram.com/reel/DTxMR2MjHp_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-            { src: "assets/atmosphere/reel-mastandrea.png", label: "Valerio Mastandrea", href: "https://www.instagram.com/reel/DHynZI8Ndkc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-            { src: "assets/atmosphere/reel-samani.png",     label: "Laura Samani",       href: "https://www.instagram.com/reel/DXMmCggN9R1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+            { src: "assets/atmosphere/reel-sorrentino.jpg", label: "Paolo Sorrentino",   href: "https://www.instagram.com/reel/DTxMR2MjHp_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+            { src: "assets/atmosphere/reel-mastandrea.jpg", label: "Valerio Mastandrea", href: "https://www.instagram.com/reel/DHynZI8Ndkc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+            { src: "assets/atmosphere/reel-samani.jpg",     label: "Laura Samani",       href: "https://www.instagram.com/reel/DXMmCggN9R1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
           ].map((r, i) => (
             <a key={i} href={r.href} target="_blank" rel="noopener"
                style={{ position: "relative", aspectRatio: "9/16", overflow: "hidden", background: "#0a0a0a", display: "block" }}
@@ -316,7 +316,7 @@ function AtmosphereGallery({ t, lang }) {
           <span className="gallery-cap">{lang === "it" ? "Foyer · programmi" : "Foyer · programmes"}</span>
         </a>
         <a className="gallery-cell" style={{ gridArea: "a" }}>
-          <img src={RES("assets/atmosphere/sonorizzazione-annoni.png")} alt={lang === "it" ? "Sonorizzazione live · Edmondo Annoni" : "Live scoring · Edmondo Annoni"} loading="lazy" />
+          <img src={RES("assets/atmosphere/sonorizzazione-annoni.jpg")} alt={lang === "it" ? "Sonorizzazione live · Edmondo Annoni" : "Live scoring · Edmondo Annoni"} loading="lazy" />
           <span className="gallery-cap">{lang === "it" ? "Sonorizzazione live · Edmondo Annoni" : "Live scoring · Edmondo Annoni"}</span>
         </a>
         <a className="gallery-cell" style={{ gridArea: "b" }}>
