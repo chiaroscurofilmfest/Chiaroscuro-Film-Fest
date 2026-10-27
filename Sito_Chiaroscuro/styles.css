@@ -12,7 +12,7 @@
   /* current theme (overridden by data-theme=dark) */
   --bg: var(--paper);
   --fg: var(--ink);
-  --fg-dim: rgba(24, 24, 24, 0.55);
+  --fg-dim: rgba(24, 24, 24, 0.64);
   --fg-faint: rgba(24, 24, 24, 0.28);
   --line: rgba(24, 24, 24, 0.14);
   --line-strong: rgba(24, 24, 24, 0.85);
@@ -54,6 +54,10 @@ html { scroll-behavior: smooth; }
 section[id] { scroll-margin-top: 92px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 html, body { margin: 0; padding: 0; }
+/* focus visibile per chi naviga da tastiera */
+:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+[data-theme="light"] :focus-visible { outline-color: var(--ink); }
+[data-theme="light"] .dark-sect :focus-visible { outline-color: var(--yellow); }
 html { background: var(--bg); }
 body {
   font-family: var(--f-sans);
@@ -901,6 +905,9 @@ footer.foot { padding-top: clamp(72px, 7.5vw, 112px); }
   margin-bottom: -2px;
 }
 [data-theme="dark"] .film .award { color: var(--yellow); }
+/* sul chiaro il giallo non si legge (1,5:1): etichetta in nero, il giallo resta nei temi scuri */
+[data-theme="light"] .film .award { color: var(--fg); }
+[data-theme="light"] .dark-sect .film .award { color: var(--yellow); }
 .film .title {
   font-size: 20px;
   font-weight: 600;

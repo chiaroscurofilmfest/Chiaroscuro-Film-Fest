@@ -2,7 +2,7 @@
 
 const TARGET_2026 = "2026-12-31T23:59:59+01:00"; // Earlybird deadline — submissions 2027
 
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+const TWEAK_DEFAULTS = {
   "lang": "it",
   "theme": "light",
   "density": "regular",
@@ -10,10 +10,11 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "heroVariant": "countdown",
   "animO": true,
   "cursorLight": false
-}/*EDITMODE-END*/;
+};
 
 function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [t, setT] = React.useState(TWEAK_DEFAULTS);
+  const setTweak = (k, v) => setT((prev) => ({ ...prev, [k]: v }));
   const lang = t.lang === "en" ? "en" : "it";
   const setLang = (l) => setTweak("lang", l);
   const copy = window.COPY[lang];
@@ -62,65 +63,6 @@ function App() {
       <ContactSection    t={copy} lang={lang} />
 
       <Footer t={copy} lang={lang} />
-
-      <TweaksPanel>
-        <TweakSection label={lang === "it" ? "Generale" : "General"} />
-        <TweakRadio
-          label={lang === "it" ? "Tema" : "Theme"}
-          value={t.theme}
-          options={["light", "dark"]}
-          onChange={(v) => setTweak("theme", v)}
-        />
-        <TweakRadio
-          label={lang === "it" ? "Densità" : "Density"}
-          value={t.density}
-          options={["compact", "regular", "comfy"]}
-          onChange={(v) => setTweak("density", v)}
-        />
-        <TweakRadio
-          label={lang === "it" ? "Lingua" : "Language"}
-          value={t.lang}
-          options={["it", "en"]}
-          onChange={(v) => setTweak("lang", v)}
-        />
-
-        <TweakSection label={lang === "it" ? "Tipografia" : "Typography"} />
-        <TweakSelect
-          label={lang === "it" ? "Font display" : "Display font"}
-          value={t.font}
-          options={[
-            { value: "sans",    label: "General Sans · editorial neutral" },
-            { value: "display", label: "Cabinet Grotesk · display" },
-            { value: "serif",   label: "Instrument Serif · cinéphile" },
-          ]}
-          onChange={(v) => setTweak("font", v)}
-        />
-
-        <TweakSection label={lang === "it" ? "Hero" : "Hero"} />
-        <TweakSelect
-          label={lang === "it" ? "Layout hero" : "Hero layout"}
-          value={t.heroVariant}
-          options={[
-            { value: "countdown",   label: lang === "it" ? "Countdown editoriale" : "Editorial countdown" },
-            { value: "compact",     label: lang === "it" ? "Countdown ridotto" : "Compact countdown" },
-            { value: "editorial",   label: lang === "it" ? "Editoriale / Indice" : "Editorial / Index" },
-            { value: "marquee",     label: lang === "it" ? "Marquee cinetico" : "Kinetic marquee" },
-            { value: "manifesto",   label: lang === "it" ? "Manifesto tipografico" : "Typographic manifesto" },
-            { value: "chiaroscuro", label: lang === "it" ? "Chiaroscuro (luce/ombra)" : "Chiaroscuro (light/shadow)" },
-          ]}
-          onChange={(v) => setTweak("heroVariant", v)}
-        />
-        <TweakToggle
-          label={lang === "it" ? "Animazione del marchio “oo”" : "“oo” logo mark animation"}
-          value={t.animO}
-          onChange={(v) => setTweak("animO", v)}
-        />
-        <TweakToggle
-          label={lang === "it" ? "Spotlight cursore" : "Cursor spotlight"}
-          value={t.cursorLight}
-          onChange={(v) => setTweak("cursorLight", v)}
-        />
-      </TweaksPanel>
     </React.Fragment>
   );
 }
