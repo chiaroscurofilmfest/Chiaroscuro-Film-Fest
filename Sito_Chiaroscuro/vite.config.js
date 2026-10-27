@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         main: resolve("index.html"),
         trasparenza: resolve("trasparenza.html"),
+        privacy: resolve("privacy.html"),
       },
     },
   },

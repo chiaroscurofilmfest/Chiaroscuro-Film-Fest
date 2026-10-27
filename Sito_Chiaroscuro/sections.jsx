@@ -10,7 +10,7 @@ function AtmosphereDivider({ src, videoId, caption, alt, height = "70vh", ratio 
         <div style={{ position: "relative", overflow: "hidden", aspectRatio: videoId ? ratio : undefined, height: videoId ? "auto" : height, maxHeight: 900, background: "#0a0a0a" }}>
           {videoId ? (
             <iframe
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=1&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3`}
+              src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=1&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3`}
               title={alt || "Chiaroscuro Film Fest"}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
