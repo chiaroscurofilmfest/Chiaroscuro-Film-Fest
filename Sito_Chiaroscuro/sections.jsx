@@ -33,7 +33,7 @@ function AtmosphereDivider({ src, videoId, caption, alt, height = "70vh", ratio 
             gap: 24, flexWrap: "wrap",
           }}>
             <span>{caption}</span>
-            <span style={{ color: "var(--fg-faint)" }}>↳ III · 2026</span>
+            <span>↳ III · 2026</span>
           </figcaption>
         )}
       </figure>
@@ -92,7 +92,7 @@ function SubmitSection({ t, lang }) {
           <ul style={{ listStyle: "none", padding: 0, margin: 0, borderTop: "1px solid var(--line)" }}>
             {t.submit.categories.map((c, i) => (
               <li key={i} style={{ display: "grid", gridTemplateColumns: "minmax(180px, 1fr) 2fr", gap: 24, padding: "20px 0", borderBottom: "1px solid var(--line)", alignItems: "baseline" }}>
-                <span style={{ fontFamily: "var(--f-mono)", fontSize: 12, letterSpacing: "0.08em", color: "var(--fg)" }}>{c.k}</span>
+                <span style={{ fontSize: 14, fontWeight: 600, letterSpacing: "0.03em", color: "var(--fg)" }}>{c.k}</span>
                 <span style={{ color: "var(--fg-dim)", fontSize: 15 }}>{c.v}</span>
               </li>
             ))}
@@ -113,7 +113,7 @@ function SubmitSection({ t, lang }) {
           <a className="btn btn-yellow" href="https://filmfreeway.com/chiaroscurofilmfest" target="_blank" rel="noopener" style={{ justifyContent: "center", marginTop: 8 }}>
             {t.submit.cta} <span className="arrow" />
           </a>
-          <span style={{ fontFamily: "var(--f-mono)", fontSize: 11, color: "var(--fg-dim)", textAlign: "center", letterSpacing: "0.06em" }}>
+          <span style={{ fontFamily: "var(--f-mono)", fontSize: 12, color: "var(--fg-dim)", textAlign: "center", letterSpacing: "0.02em" }}>
             filmfreeway.com/chiaroscurofilmfest
           </span>
         </div>
@@ -278,7 +278,7 @@ function IncontraSection({ t, lang }) {
                 </span>
                 <span style={{ fontFamily: "var(--f-mono)", fontSize: 11, letterSpacing: "0.08em", textTransform: "uppercase" }}>{r.label}</span>
               </div>
-              <span style={{ position: "absolute", top: 14, right: 14, fontFamily: "var(--f-mono)", fontSize: 9.5, padding: "4px 7px", background: "rgba(0,0,0,.5)", color: "var(--paper)", letterSpacing: "0.08em", textTransform: "uppercase", backdropFilter: "blur(4px)" }}>Reel</span>
+              <span style={{ position: "absolute", top: 14, right: 14, fontFamily: "var(--f-mono)", fontSize: 12, padding: "4px 8px", background: "rgba(0,0,0,.5)", color: "var(--paper)", letterSpacing: "0.08em", textTransform: "uppercase", backdropFilter: "blur(4px)" }}>Reel</span>
             </a>
           ))}
         </div>

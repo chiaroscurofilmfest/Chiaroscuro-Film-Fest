@@ -269,9 +269,8 @@ img { display: block; max-width: 100%; }
   z-index: 80;
   padding: 16px var(--gutter);
   display: flex; align-items: center; justify-content: space-between;
-  background: color-mix(in oklab, var(--bg) 78%, transparent);
-  backdrop-filter: saturate(140%) blur(12px);
-  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  /* fondo pieno: sopra le sezioni scure la trasparenza diventava un grigio sporco */
+  background: var(--paper);
   border-bottom: 1px solid transparent;
   transition: border-color 200ms ease, background 200ms ease;
 }
@@ -374,6 +373,33 @@ footer.foot { padding-top: clamp(72px, 7.5vw, 112px); }
 .hero[data-variant="countdown"] { padding-bottom: 64px; }
 .hero[data-variant="manifesto"] { padding-bottom: 80px; }
 .hero[data-variant="chiaroscuro"] { padding-bottom: 0; }
+
+/* Hero con la foto della sala */
+.hero.hero--photo { padding-block: 70px 56px; overflow: hidden; isolation: isolate; }
+.hero-photo { position: absolute; inset: 0; z-index: -1; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 78%; display: block; }
+.hero--photo .hero-meta { grid-template-columns: 1fr 2fr 1fr; }
+.hero-photo::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(14,14,14,.72) 0%, rgba(14,14,14,0) 22%),
+    linear-gradient(to top, rgba(14,14,14,.96) 0%, rgba(14,14,14,.82) 34%, rgba(14,14,14,.15) 68%, rgba(14,14,14,0) 80%);
+}
+.hero--photo .hero-meta { border-bottom-color: rgba(250,249,246,.18); }
+.hero--photo .hero-stage { justify-content: flex-end; gap: 20px; padding-block: 0; }
+.hero--photo .hero-headline { font-size: clamp(44px, 6.4vw, 104px); }
+.hero--photo .cd-grid { margin-block: 8px 12px; }
+.hero--photo .cd-cell .num { font-size: clamp(52px, 7vw, 112px); }
+@media (max-width: 760px) {
+  /* su mobile la foto sta in alto e il testo scende sul nero */
+  .hero-photo { top: 126px; bottom: auto; height: 34%; }
+  .hero-photo img { object-position: 50% 40%; }
+  .hero--photo .hero-meta { border-bottom: 0; }
+  .hero-photo::after { background: linear-gradient(to bottom, var(--ink) 0%, rgba(14,14,14,0) 18%, rgba(14,14,14,0) 70%, var(--ink) 100%); }
+  .hero--photo .hero-meta { grid-template-columns: 1fr; }
+}
+.hero--photo .btn-ghost { border-color: rgba(250,249,246,.7); color: var(--paper); }
+.hero--photo .btn-ghost:hover { background: var(--paper); color: var(--ink); }
 
 /* Hero header strip (meta + countdown) */
 .hero-meta {
@@ -1269,3 +1295,27 @@ footer.foot {
   .cd-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
   .cd-cell .num { font-size: clamp(56px, 22vw, 120px); }
 }
+
+
+/* ========== Sistema tipografico ==========
+   General Sans per titoli e testo, Instrument Serif corsivo per i titoli dei film e le
+   citazioni della stampa, JetBrains Mono solo per dati (date, orari, scadenze, countdown).
+   Nessun testo sotto i 12px. */
+.section-meta { font-size: 12px; letter-spacing: 0.1em; }
+.winner-title, .film .title {
+  font-family: var(--f-serif); font-style: italic; font-weight: 400;
+  font-size: 30px; letter-spacing: -0.005em; line-height: 1.05;
+}
+.press-card .headline {
+  font-family: var(--f-serif); font-style: italic; font-weight: 400;
+  font-size: 28px; line-height: 1.15; letter-spacing: 0;
+}
+.person .role, .partner .role, .tag {
+  font-family: var(--f-sans); font-size: 13px;
+  letter-spacing: 0; text-transform: none; line-height: 1.4;
+}
+.gallery-cap { font-family: var(--f-sans); font-size: 13px; letter-spacing: 0; text-transform: none; }
+.winner-badge, .lang-toggle button, .slot .cat, .foot-bottom { font-size: 12px; }
+.foot-bottom { text-transform: none; letter-spacing: 0.02em; }
+.slot .body .meta { font-family: var(--f-sans); font-size: 14px; letter-spacing: 0; text-transform: none; }
+.albo-summary-count { color: var(--ink); }

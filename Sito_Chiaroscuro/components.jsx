@@ -80,12 +80,9 @@ function SectionHead({ eyebrow, title, lede, idx, rhs }) {
   return (
     <div className="section-head">
       <div className="lhs">
-        {eyebrow && (
-          <div className="eyebrow">
-            {eyebrow && (<><span className="dot" />{eyebrow}</>)}
-          </div>
-        )}
         {title && <h2 className="h-1">{title}</h2>}
+        {/* l'etichetta resta solo se porta un dato (anno, edizione): sotto il titolo, in monospace */}
+        {eyebrow && /\d{4}/.test(eyebrow) && <div className="eyebrow section-meta">{eyebrow}</div>}
       </div>
       {(lede || rhs) && <div className="rhs body" dangerouslySetInnerHTML={{ __html: lede || rhs }} />}
     </div>

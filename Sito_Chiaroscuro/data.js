@@ -223,7 +223,7 @@ const COPY = {
     },
     footer: {
       tagline: "Cinema breve, emergente, a Bergamo.",
-      colophon: "© 2026 CHIAROSCURO FILM FEST — UN PROGETTO DI CHIAROSCURO ETS, C.F. 95269850160 — TUTTI I DIRITTI RISERVATI.",
+      colophon: "© 2026 Chiaroscuro Film Fest — un progetto di Chiaroscuro ETS, C.F. 95269850160 — tutti i diritti riservati.",
       legal: ["Privacy", "Cookie", "Trasparenza"],
     },
   },

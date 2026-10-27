@@ -3,7 +3,17 @@
 const HeroCountdown = ({ t, lang, animO, target }) => {
   const { D, H, M, S } = useCountdown(target);
   return (
-    <section className="hero" data-variant="countdown">
+    <section className="hero hero--photo dark-sect" data-variant="countdown">
+      {/* La sala al buio: lo schermo è l'unica fonte di luce, il testo sta nell'ombra del pubblico */}
+      <div className="hero-photo" aria-hidden="true">
+        <img
+          src={RES("assets/atmosphere/hero-sala.jpg")}
+          srcSet={`${RES("assets/atmosphere/hero-sala-1200.jpg")} 1200w, ${RES("assets/atmosphere/hero-sala.jpg")} 2400w`}
+          sizes="100vw"
+          alt=""
+          fetchpriority="high"
+        />
+      </div>
       <div className="hero-meta">
         <span>
           <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: "50%", background: "var(--yellow)", marginRight: 10, verticalAlign: 2 }} />
@@ -16,7 +26,6 @@ const HeroCountdown = ({ t, lang, animO, target }) => {
       <div className="hero-stage">
         <div className="hero-top-line">
           <div className="hero-title-stack">
-            <span className="eyebrow"><span className="idx">{lang === "it" ? "Scadenza early bird" : "Early bird deadline"}</span></span>
             <h1 className="hero-headline">
               {lang === "it" ? "Iscrivi il tuo film" : "Submit your film"}<br />
               {lang === "it" ? "entro il 31 Dicembre" : "by December 31"}
