@@ -6,3 +6,7 @@ import "./components.jsx";
 import "./hero.jsx";
 import "./sections.jsx";
 import "./app.jsx";
+
+// La pagina arriva già scritta (pre-generata in build per Google e per le AI):
+// React la sostituisce con la versione interattiva.
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

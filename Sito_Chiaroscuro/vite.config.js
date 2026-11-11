@@ -22,6 +22,9 @@ export default defineConfig({
       name: "copy-assets",
       closeBundle() {
         cpSync("assets", "dist/assets", { recursive: true });
+        // file che Google e i crawler cercano nella radice del sito
+        cpSync("robots.txt", "dist/robots.txt");
+        cpSync("sitemap.xml", "dist/sitemap.xml");
       },
     },
   ],

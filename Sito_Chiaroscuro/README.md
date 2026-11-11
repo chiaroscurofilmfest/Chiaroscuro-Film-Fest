@@ -26,6 +26,11 @@ components.jsx    menu, footer, intestazioni di sezione
 styles.css        stili
 assets/           immagini (copiate così come sono nella build)
 vite.config.js    configurazione della compilazione
+server.jsx        pre-generazione (con ssr-globals.js e prerender.mjs): in build scrivono
+                  il testo della pagina dentro index.html, così Google e le AI lo leggono
+                  anche senza JavaScript
+robots.txt        indicazioni per i motori di ricerca
+sitemap.xml       elenco delle pagine per i motori di ricerca
 vercel.json       dice a Vercel come compilare
 ```
 
