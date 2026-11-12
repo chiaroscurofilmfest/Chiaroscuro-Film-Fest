@@ -25,6 +25,8 @@ export default defineConfig({
         // file che Google e i crawler cercano nella radice del sito
         cpSync("robots.txt", "dist/robots.txt");
         cpSync("sitemap.xml", "dist/sitemap.xml");
+        // verifica di Google Search Console: deve restare nella radice del sito
+        cpSync("google5f895e867161a17c.html", "dist/google5f895e867161a17c.html");
       },
     },
   ],
